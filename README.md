@@ -1,10 +1,11 @@
 # dotfiles
 pretty clear
 
-## setup
-
-##### see: https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/
 -----
+##### see: https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/
+##### You will basically be using a bare git repo like any other, but instead of `git` you will use the `config` command.
+-----
+## setup
 
 Do not track yourself:
 ```sh
