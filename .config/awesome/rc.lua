@@ -52,7 +52,8 @@ nice()
 beautiful.useless_gap = 9
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xfce4-terminal"
+-- terminal = "xfce4-terminal"
+terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -334,9 +335,13 @@ globalkeys = gears.table.join(
                   }
               end,
               {description = "lua execute prompt", group = "awesome"}),
-    -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+    -- Menubar --> trying to replace launcher with rofi
+--    awful.key({ modkey }, "p", function() menubar.show() end,
+--              {description = "show the menubar", group = "launcher"})
+-- https://www.reddit.com/r/awesomewm/comments/oyspco/rofi_with_awesome/
+			awful.key({modkey}, "p", function() 
+				awful.spawn.with_shell("rofi -show drun &>> /tmp/rofi.log") end, { ... })
+
 )
 
 clientkeys = gears.table.join(

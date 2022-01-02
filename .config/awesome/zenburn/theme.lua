@@ -16,8 +16,14 @@ theme.wallpaper =
 theme.font      = "Ubuntu Mono derivative Powerline Bold 13"
 
 -- {{{ Colors
+-- some specific colors I like:
+local sexy_magenta = "#cd23b9"
+local sexy_aliz_red = "#f0544c"
+local sexy_focus_blue = "#22e5f7"
+local sexy_rofi_purp = "#A05EB5"
+
 theme.fg_normal  = "#f7f7f7"
-theme.fg_focus   = "#22e5f7"
+theme.fg_focus   = sexy_aliz_red
 theme.fg_urgent  = "#fc4949"
 theme.bg_normal  = "#1e2320"
 theme.bg_focus   = "#1E2320"
@@ -29,10 +35,8 @@ theme.bg_systray = theme.bg_normal
 theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(2)
 theme.border_normal = "#3F3F3F"
-theme.border_focus  = "#cd23b9"
--- sexy pink original: #cd23b9
--- blue: 
 theme.border_marked = "#CC9393"
+theme.border_focus  = sexy_aliz_red 
 -- }}}
 
 -- {{{ Titlebars
