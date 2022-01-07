@@ -14,7 +14,7 @@ echo ".cfg" >> .gitignore
 
 Clone repo:
 ```sh
-git clone --bare url $HOME/.cfg
+git clone --bare https://github.com/wtraceyv/dotfiles.git $HOME/.cfg
 ```
 
 >On cloning, you should already have an alias for zsh binding `config` to `git`, but for that .cfg repo only.
