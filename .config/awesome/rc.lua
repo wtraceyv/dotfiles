@@ -45,16 +45,16 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/walter/.config/awesome/zenburn/theme.lua")
+beautiful.init("~/.config/awesome/zenburn/theme.lua")
 local nice = require("nice")
 nice()
 
-beautiful.useless_gap = 9
+beautiful.useless_gap = 5
 
 -- This is used later as the default terminal and editor to run.
 -- terminal = "xfce4-terminal"
 terminal = "alacritty"
-editor = os.getenv("EDITOR") or "nano"
+editor = "vim" or os.getenv("EDITOR")
 editor_cmd = terminal .. " -e " .. editor
 
 internet_browser = "firefox-developer-edition"
@@ -176,7 +176,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -205,7 +205,7 @@ s.mytasklist = awful.widget.tasklist {
 		-- END OF FANCY TASKLIST SETUP
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "bottom", screen = s })
+    s.mywibox = awful.wibar({ position = "top", screen = s })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -238,8 +238,8 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-		awful.key({ modkey, 					}, "f",			hotkeys_popup.firefox,
-							{description="browser", group="Applications"}),
+		--awful.key({ modkey, 					}, "f",			hotkeys_popup.firefox,
+		--					{description="browser", group="Applications"}),
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
@@ -353,9 +353,9 @@ clientkeys = gears.table.join(
         end,
         {description = "toggle fullscreen", group = "client"}),
 	]]
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
+    awful.key({ modkey,    }, "c",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
-    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
+    awful.key({ modkey, }, "f",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
@@ -504,9 +504,6 @@ awful.rules.rules = {
       }, properties = { titlebars_enabled = false} -- MAC style bars -> set to true
     },
 
-    -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
 }
 -- }}}
 

@@ -2,7 +2,7 @@
 export ZSH="/home/walter/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# robbyrussell agnoster half-life 
+# robbyrussell agnoster half-life cmd-prompt
 ZSH_THEME="cmd-prompt"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
@@ -40,6 +40,17 @@ alias vi="vim"
 alias gits='git status'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias configs='config status'
+
+alias mst="TZ='America/Denver' date"
+
+function search {
+	echo "..Searching; Fail 1, retry.."
+	for i in {1..20}
+	do
+		echo "..Searching; begin hour $i:00:00" 
+		echo "Fail $(($i+1)), retry.."
+	done
+}
 
 # compile ATT assembly with gcc
 function gasm {

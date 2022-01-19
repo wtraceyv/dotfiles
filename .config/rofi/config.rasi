@@ -13,6 +13,7 @@ configuration {
 	// selected-normal-background: rgba ( 160, 94, 181, 100 % );
 	selected-normal-background: rgba ( 240, 84, 76, 100 % );
 
+	alternate-active-background: rgba ( 64, 69, 82, 100% );
 }
 
 window {

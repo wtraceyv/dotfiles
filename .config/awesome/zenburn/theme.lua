@@ -9,24 +9,31 @@ local dpi = require("beautiful.xresources").apply_dpi
 -- {{{ Main
 local theme = {}
 theme.wallpaper =
-'/home/walter/.config/awesome/zenburn/wallpapers/alena-aenami-lights1k1.jpg'
+'~/.wallpapers/tokyostreet.jpg'
 -- }}}
 
 -- {{{ Styles
-theme.font      = "Ubuntu Mono derivative Powerline Bold 13"
+-- theme.font      = "Ubuntu Mono derivative Powerline Bold 13"
+theme.font      = "Noto Mono for Powerline 11"
 
 -- {{{ Colors
 -- some specific colors I like:
 local sexy_magenta = "#cd23b9"
-local sexy_aliz_red = "#f0544c"
 local sexy_focus_blue = "#22e5f7"
 local sexy_rofi_purp = "#A05EB5"
 
+-- dark-aliz stealing
+local aliz_red = "#f0544c"
+local aliz_dark = "#1a1a1a"
+local aliz_bg_focus = "#393939"
+
+local old_dark_green = "#1e2320"
+
 theme.fg_normal  = "#f7f7f7"
-theme.fg_focus   = sexy_aliz_red
+theme.fg_focus   = aliz_red
 theme.fg_urgent  = "#fc4949"
-theme.bg_normal  = "#1e2320"
-theme.bg_focus   = "#1E2320"
+theme.bg_normal  = aliz_dark 
+theme.bg_focus   = aliz_dark
 theme.bg_urgent  = "#3F3F3F"
 theme.bg_systray = theme.bg_normal
 -- }}}
@@ -36,11 +43,11 @@ theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(2)
 theme.border_normal = "#3F3F3F"
 theme.border_marked = "#CC9393"
-theme.border_focus  = sexy_aliz_red 
+theme.border_focus  = aliz_red 
 -- }}}
 
 -- {{{ Titlebars
-theme.titlebar_bg_focus  = "#1e2320"
+theme.titlebar_bg_focus  = aliz_dark 
 theme.titlebar_bg_normal = "#3F3F3F"
 -- }}}
 

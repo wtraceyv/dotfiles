@@ -119,10 +119,10 @@ _private.mb_win_shade_rollup = nice.MB_SCROLL_UP
 _private.mb_win_shade_rolldown = nice.MB_SCROLL_DOWN
 
 -- Titlebar Items
-_private.button_size = 16
+_private.button_size = 12
 _private.button_margin_horizontal = 5
 -- _private.button_margin_vertical
-_private.button_margin_top = 2
+_private.button_margin_top = 1
 -- _private.button_margin_bottom = 0
 -- _private.button_margin_left = 0
 -- _private.button_margin_right = 0
@@ -139,10 +139,17 @@ _private.tooltip_messages = {
     sticky_active = "disable sticky mode",
     sticky_inactive = "enable sticky mode",
 }
--- original mac-y colors: ee4266, ffb400, 4CBB17
-_private.close_color = "#fc32d7"
-_private.minimize_color = "#f0f93e"
-_private.maximize_color = "#50dcfc"
+-- mac colors i found 
+local mac_red = "#ee4266"
+local mac_yellow = "#ffb400"
+local mac_green = "#4cbb17"
+local stock_pink = "#fc32d7"
+local stock_yellow = "#f0f93e"
+local stock_blue = "#50dcfc"
+
+_private.close_color = mac_red 
+_private.minimize_color = mac_yellow 
+_private.maximize_color = mac_green 
 _private.floating_color = "#f6a2ed"
 _private.ontop_color = "#f6a2ed"
 _private.sticky_color = "#f6a2ed"

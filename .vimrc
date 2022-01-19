@@ -2,7 +2,8 @@
 :syntax on
 " colorscheme available on github, place in ~/.vim/colors/
 " otherwise set your own or get rid of :colorscheme 
-:colorscheme monokai-bold
+
+":colorscheme monokai-bold
 :set number
 :set cursorline
 :set noexpandtab
