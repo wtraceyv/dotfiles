@@ -6,31 +6,24 @@
 local themes_path = require("gears.filesystem").get_themes_dir()
 local dpi = require("beautiful.xresources").apply_dpi
 
--- {{{ Main
 local theme = {}
 theme.wallpaper =
-'~/.wallpapers/tokyonight.jpg'
--- }}}
+'~/.wallpapers/orangenized.jpg'
 
--- {{{ Styles
--- theme.font      = "Ubuntu Mono derivative Powerline Bold 13"
-theme.font      = "Noto Mono for Powerline 11"
+theme.font      = "Ubuntu Mono derivative Powerline 13"
+--theme.font      = "Noto Mono for Powerline 11"
 
--- {{{ Colors
 -- some specific colors I like:
 local sexy_magenta = "#cd23b9"
 local sexy_focus_blue = "#22e5f7"
 local sexy_rofi_purp = "#A05EB5"
-
--- dark-aliz stealing
 local aliz_red = "#f0544c"
-local aliz_dark = "#1a1a1a"
+local aliz_dark = "#1a1a1a88"
 local aliz_bg_focus = "#393939"
-
 local tokyo_green = "#26A98B"
-
 local old_dark_green = "#1e2320"
 
+-- general 
 theme.fg_normal  = "#f7f7f7"
 theme.fg_focus   = aliz_red 
 theme.fg_urgent  = "#fc4949"
@@ -38,20 +31,17 @@ theme.bg_normal  = aliz_dark
 theme.bg_focus   = aliz_dark
 theme.bg_urgent  = "#3F3F3F"
 theme.bg_systray = theme.bg_normal
--- }}}
 
--- {{{ Borders
+-- border
 theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(3)
 theme.border_normal = "#3F3F3F"
 theme.border_marked = "#CC9393"
 theme.border_focus  = sexy_focus_blue 
--- }}}
 
--- {{{ Titlebars
+-- titlebar
 theme.titlebar_bg_focus  = aliz_dark 
 theme.titlebar_bg_normal = "#3F3F3F"
--- }}}
 
 -- There are other variable sets
 -- overriding the default one when
@@ -77,15 +67,13 @@ theme.titlebar_bg_normal = "#3F3F3F"
 -- {{{ Mouse finder
 theme.mouse_finder_color = "#CC9393"
 -- mouse_finder_[timeout|animate_timeout|radius|factor]
--- }}}
 
 -- {{{ Menu
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
-theme.menu_height = dpi(15)
-theme.menu_width  = dpi(100)
--- }}}
+theme.menu_height = dpi(30)
+theme.menu_width  = dpi(175)
 
 -- {{{ Icons
 -- {{{ Taglist
@@ -97,7 +85,6 @@ theme.taglist_squares_unsel = themes_path .. "zenburn/taglist/squarez.png"
 -- {{{ Misc
 theme.awesome_icon           = themes_path .. "zenburn/awesome-icon.png"
 theme.menu_submenu_icon      = themes_path .. "default/submenu.png"
--- }}}
 
 -- {{{ Layout
 theme.layout_tile       = themes_path .. "zenburn/layouts/tile.png"
@@ -116,7 +103,6 @@ theme.layout_cornernw   = themes_path .. "zenburn/layouts/cornernw.png"
 theme.layout_cornerne   = themes_path .. "zenburn/layouts/cornerne.png"
 theme.layout_cornersw   = themes_path .. "zenburn/layouts/cornersw.png"
 theme.layout_cornerse   = themes_path .. "zenburn/layouts/cornerse.png"
--- }}}
 
 -- {{{ Titlebar
 theme.titlebar_close_button_focus  = themes_path .. "zenburn/titlebar/close_focus.png"

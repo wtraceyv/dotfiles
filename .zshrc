@@ -12,7 +12,8 @@ DISABLE_AUTO_UPDATE="true"
 
 # Standard plugins can be found in $ZSH/plugins/
 # insert 'vi-mode' (with whitespace) to get vim mode in shell
-plugins=(git vi-mode)
+plugins=(git vi-mode tmux)
+ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
 
