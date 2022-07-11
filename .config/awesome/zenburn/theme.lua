@@ -9,7 +9,7 @@ local dpi = require("beautiful.xresources").apply_dpi
 -- {{{ Main
 local theme = {}
 theme.wallpaper =
-'~/.wallpapers/tokyostreet.jpg'
+'~/.wallpapers/tokyonight.jpg'
 -- }}}
 
 -- {{{ Styles
@@ -27,10 +27,12 @@ local aliz_red = "#f0544c"
 local aliz_dark = "#1a1a1a"
 local aliz_bg_focus = "#393939"
 
+local tokyo_green = "#26A98B"
+
 local old_dark_green = "#1e2320"
 
 theme.fg_normal  = "#f7f7f7"
-theme.fg_focus   = aliz_red
+theme.fg_focus   = aliz_red 
 theme.fg_urgent  = "#fc4949"
 theme.bg_normal  = aliz_dark 
 theme.bg_focus   = aliz_dark
@@ -40,10 +42,10 @@ theme.bg_systray = theme.bg_normal
 
 -- {{{ Borders
 theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(2)
+theme.border_width  = dpi(3)
 theme.border_normal = "#3F3F3F"
 theme.border_marked = "#CC9393"
-theme.border_focus  = aliz_red 
+theme.border_focus  = sexy_focus_blue 
 -- }}}
 
 -- {{{ Titlebars

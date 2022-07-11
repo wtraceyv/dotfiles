@@ -2,16 +2,18 @@
 // android-notification
 
 configuration {
-	modi: "window,drun,ssh";
+	modi: "window,drun,combi";
 	window {
 		close-on-delete: false;
 	}
 }
-@theme "Arc-Dark"
+@theme "macy"
 
 * {
 	// selected-normal-background: rgba ( 160, 94, 181, 100 % );
-	selected-normal-background: rgba ( 240, 84, 76, 100 % );
+	// selected-normal-background: rgba ( 34, 229, 247, 100 % );
+	selected-normal-background: rgba ( 38, 169, 139, 100 % );
+	// selected-normal-background: rgba ( 240, 84, 76, 100 % );
 
 	alternate-active-background: rgba ( 64, 69, 82, 100% );
 }

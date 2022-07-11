@@ -3,7 +3,8 @@ export ZSH="/home/walter/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # robbyrussell agnoster half-life cmd-prompt
-ZSH_THEME="cmd-prompt"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="../../.my-zsh-themes/robbyrussell"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -33,6 +34,7 @@ fi
 alias c='clear'
 alias e='exit'
 alias l='ls -lah'
+alias li='ls -lh'
 alias neoa='neofetch --ascii_distro arch'
 alias neog='neofetch --ascii_distro gentoo'
 alias sus='systemctl suspend'
@@ -40,16 +42,13 @@ alias vi="vim"
 alias gits='git status'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias configs='config status'
+alias py="python3"
 
 alias mst="TZ='America/Denver' date"
 
-function search {
-	echo "..Searching; Fail 1, retry.."
-	for i in {1..20}
-	do
-		echo "..Searching; begin hour $i:00:00" 
-		echo "Fail $(($i+1)), retry.."
-	done
+function grun {
+	g++ -g --std=c++20 $1
+	./a.out
 }
 
 # compile ATT assembly with gcc
