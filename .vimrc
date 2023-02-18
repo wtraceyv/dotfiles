@@ -5,6 +5,7 @@
 
 ":colorscheme monokai-bold
 :set number
+":set relativenumber
 :set cursorline
 :set noexpandtab
 :set tabstop=2

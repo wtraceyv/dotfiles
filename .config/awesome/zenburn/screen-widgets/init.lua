@@ -133,7 +133,7 @@ s.mytasklist = awful.widget.tasklist {
 		-- END OF FANCY TASKLIST SETUP
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({ position = "bottom", screen = s })
     --s.mywibox = awful.wibar({ position = "left", screen = s })
 
     -- Add widgets to the wibox

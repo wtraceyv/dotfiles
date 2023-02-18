@@ -11,9 +11,11 @@ configuration {
 
 * {
 		fulltransparent: #00000000;
-    transparent: #484284bb;
+		// old purple: 484284bb
+    transparent: #db65c6bb;
+
     foreground: #F2F2F2EE;
-    background-selected: #F2F2F266;
+    background-selected: #32323288;
     background-active: #F2F2F244;
     background-white: #F2F2F211;
     background-black: @fulltransparent;

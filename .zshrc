@@ -47,6 +47,15 @@ alias py="python3"
 
 alias mst="TZ='America/Denver' date"
 
+# need specific tools/needs for these
+alias pic='(picom >/dev/null &)'
+alias temps="watch sensors"
+alias smooth='nvidia-force-comp-pipeline'
+alias 3s='3-screens.sh && nvidia-force-comp-pipeline'
+alias red="redshift -O 5600K"
+alias nored="redshift -x"
+alias wp="feh -g 640x480 -d -S filename ~/.wallpapers -A 'feh --bg-scale ~/.wallpapers/%n'"
+
 function grun {
 	g++ -g --std=c++20 $1
 	./a.out
@@ -66,10 +75,19 @@ function gasm {
 	./a.out
 }
 
-# need specific tools/needs for these
-alias pic='(picom >/dev/null &)'
-alias temps="watch sensors"
-alias smooth='nvidia-force-comp-pipeline'
+function gnasm {
+	if [[ $# -lt 1 ]]
+	then
+		echo "Supply a file of assembly"
+		return
+	fi
+
+	nasm -f elf32 -g $1 -o inter.o
+	ld -m elf_i386 -s -g inter.o
+	rm inter.o
+	./a.out
+}
+
 
 # activate syntax highlight
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -77,3 +95,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # have fzf for these
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
