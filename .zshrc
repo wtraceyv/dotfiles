@@ -63,6 +63,7 @@ function configStageAll {
 	configs | grep zshrc | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
 	configs | grep tmux | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
 	configs | grep .my-zsh-themes | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
+	configs | grep .wallpapers | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
 }
 
 function grun {
