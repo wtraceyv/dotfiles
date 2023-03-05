@@ -1,14 +1,10 @@
 local theme = {}
-theme.wallpaper = '~/.wallpapers/fish.jpeg'
--------------------------------
---  "Zenburn" awesome theme  --
---    By Adrian C. (anrxc)   --
--------------------------------
+theme.wallpaper = '~/.wallpapers/GhibliForest.jpg'
 
 local themes_path = require("gears.filesystem").get_themes_dir()
 local dpi = require("beautiful.xresources").apply_dpi
 
-theme.font      = "Ubuntu Mono derivative Powerline 13"
+theme.font      = "Ubuntu Mono derivative Powerline 12"
 --theme.font      = "Noto Mono for Powerline 11"
 
 -- some specific colors I like:
@@ -24,16 +20,14 @@ local old_dark_green = "#1e2320"
 
 -- general 
 theme.fg_normal  = "#f7f7f7"
+-- theme.fg_normal  = "#111111" 
 theme.fg_focus   = aliz_red 
 theme.fg_urgent  = "#fc4949"
-theme.bg_normal  = aliz_dark 
+-- theme.bg_normal  = aliz_dark 
+theme.bg_normal = "#00000000"
 theme.bg_focus   = aliz_dark
 theme.bg_urgent  = "#3F3F3F"
 theme.bg_systray = theme.bg_normal
-
--- border
-theme.useless_gap   = dpi(2) 
--- dpi(1)
 
 -- theme.border_width  = dpi(2)
 theme.border_width  = 0 

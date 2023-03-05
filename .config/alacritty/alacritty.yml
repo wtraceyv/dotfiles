@@ -1,6 +1,6 @@
 # import desired color file here 
 import:
-  - ~/.config/alacritty/tokyo-night-storm.yml
+  - ~/.config/alacritty/monokai-pro.yml
 window:
   opacity: 0.9
   padding:

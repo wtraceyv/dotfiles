@@ -4,7 +4,7 @@ export ZSH="/home/walter/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # robbyrussell agnoster half-life cmd-prompt
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="../../.my-zsh-themes/robbyrussell"
+ZSH_THEME="../../.my-zsh-themes/cmd-prompt"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -51,10 +51,19 @@ alias mst="TZ='America/Denver' date"
 alias pic='(picom >/dev/null &)'
 alias temps="watch sensors"
 alias smooth='nvidia-force-comp-pipeline'
-alias 3s='3-screens.sh && nvidia-force-comp-pipeline'
-alias red="redshift -O 5600K"
+alias 3s='3-screens.sh && nvidia-force-comp-pipeline' #FIXME: this just don't work
+alias red="redshift -O 4000K"
 alias nored="redshift -x"
 alias wp="feh -g 640x480 -d -S filename ~/.wallpapers -A 'feh --bg-scale ~/.wallpapers/%n'"
+
+# Much more conveniently stage changes to config files
+function configStageAll {
+	cd ~
+	configs | grep config | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
+	configs | grep zshrc | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
+	configs | grep tmux | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
+	configs | grep .my-zsh-themes | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
+}
 
 function grun {
 	g++ -g --std=c++20 $1
@@ -95,7 +104,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # have fzf for these
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)

@@ -11,8 +11,12 @@ configuration {
 
 * {
 		fulltransparent: #00000000;
-		// old purple: 484284bb
-    transparent: #db65c6bb;
+		// pink
+    //transparent: #db65c6bb; 
+		// orange
+    //transparent: #ec5759bb;
+		// blue
+    transparent: #57b9ecbb;
 
     foreground: #F2F2F2EE;
     background-selected: #32323288;
