@@ -1,5 +1,4 @@
 local awful = require("awful")
-local beautiful = require("beautiful")
 local gears = require("gears")
 local wibox = require("wibox")
 
@@ -19,6 +18,15 @@ client.connect_signal("manage", function (c)
 	end
 end)
 
+-- Enable sloppy focus, so that focus follows mouse.
+client.connect_signal("mouse::enter", function(c)
+  c:emit_signal("request::activate", "mouse_enter", {raise = false})
+end)
+
+-- client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+-- client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+-- TODO: move all titlebar styling to theme files
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
 client.connect_signal("request::titlebars", function(c)
   -- buttons for the titlebar
@@ -59,10 +67,3 @@ client.connect_signal("request::titlebars", function(c)
   }
 end)
 
--- Enable sloppy focus, so that focus follows mouse.
-client.connect_signal("mouse::enter", function(c)
-  c:emit_signal("request::activate", "mouse_enter", {raise = false})
-end)
-
-client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)

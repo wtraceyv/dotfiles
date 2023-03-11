@@ -3,8 +3,8 @@ export ZSH="/home/walter/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # robbyrussell agnoster half-life cmd-prompt
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="../../.my-zsh-themes/cmd-prompt"
+# ZSH_THEME="garyblessington"
+ZSH_THEME="../../.my-zsh-themes/half-life"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -48,7 +48,7 @@ alias py="python3"
 alias mst="TZ='America/Denver' date"
 
 # need specific tools/needs for these
-alias pic='(picom >/dev/null &)'
+alias pic='(picom -b >/dev/null &)'
 alias temps="watch sensors"
 alias smooth='nvidia-force-comp-pipeline'
 alias 3s='3-screens.sh && nvidia-force-comp-pipeline' #FIXME: this just don't work
@@ -61,6 +61,7 @@ function configStageAll {
 	cd ~
 	configs | grep config | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
 	configs | grep zshrc | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
+	configs | grep alacritty | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
 	configs | grep tmux | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
 	configs | grep .my-zsh-themes | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
 	configs | grep .wallpapers | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'

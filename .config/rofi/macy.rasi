@@ -16,7 +16,9 @@ configuration {
 		// orange
     //transparent: #ec5759bb;
 		// blue
-    transparent: #57b9ecbb;
+    //transparent: #57b9ecbb;
+
+    transparent: #66666666;
 
     foreground: #F2F2F2EE;
     background-selected: #32323288;
