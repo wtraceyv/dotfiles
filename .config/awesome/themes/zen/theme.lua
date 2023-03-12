@@ -1,8 +1,8 @@
 local theme = {}
 theme.wallpaper = '~/.wallpapers/GhibliForest.jpg'
 
-local themes_path = os.getenv("HOME") .. "./config/awesome/themes/zen/icons/"
-local dpi = require("beautiful.xresources").apply_dpi
+local themes_path = os.getenv("HOME") .. "/.config/awesome/themes/zen/icons/"
+dpi = require("beautiful.xresources").apply_dpi
 
 theme.tagnames = {"一", "二", "三", "四", "五", "六", "七", "八", "九"}
 

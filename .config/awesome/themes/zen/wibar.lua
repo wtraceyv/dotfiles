@@ -6,7 +6,24 @@ local taglist = require("themes.zen.taglist")
 local tasklist = require("themes.zen.tasklist")
 
 require("daemons.cpu")
+require("daemons.ram")
 local cpu_bar = require("sub-components.cpu_bar")
+local ram_bar = require("sub-components.ram_bar")
+
+-- Helper function that changes the appearance of progress bars and their icons
+local function format_progress_bar(bar)
+	-- Since we will rotate the bars 90 degrees, width and height are reversed
+	bar.forced_width = dpi(70)
+	bar.forced_height = dpi(30)
+	bar.shape = gears.shape.rounded_bar
+	bar.bar_shape = gears.shape.rectangle
+	local w = wibox.widget{
+			bar,
+			direction = 'east',
+			layout = wibox.container.rotate,
+	}
+	return w
+end
 
 awful.screen.connect_for_each_screen(function(s)
 
@@ -41,7 +58,8 @@ awful.screen.connect_for_each_screen(function(s)
 		tasklist.gen_tasklist(s),
 		{
 			-- Right widgets
-			cpu_bar,
+			format_progress_bar(cpu_bar),
+			format_progress_bar(ram_bar),
 			layout = wibox.layout.fixed.horizontal,
 			mytextclock,
 			s.mylayoutbox,
