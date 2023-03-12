@@ -41,6 +41,7 @@ alias neog='neofetch --ascii_distro gentoo'
 alias sus='systemctl suspend'
 alias vi="vim"
 alias gits='git status'
+alias token-git-copy='cd ~/git && ls | grep token | xargs cat | xclip -sel c && cd -'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias configs='config status'
 alias py="python3"
