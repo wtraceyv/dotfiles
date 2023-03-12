@@ -2,9 +2,9 @@
 export ZSH="/home/walter/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# robbyrussell agnoster half-life cmd-prompt
+# robbyrussell agnoster half-life cmd-prompt garyblessington
 # ZSH_THEME="garyblessington"
-ZSH_THEME="../../.my-zsh-themes/half-life"
+ZSH_THEME="../../.my-zsh-themes/021011-tools/021011"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
