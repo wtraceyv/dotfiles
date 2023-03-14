@@ -7,8 +7,10 @@ local tasklist = require("themes.zen.tasklist")
 
 require("daemons.cpu")
 require("daemons.ram")
+require("daemons.temperature")
 local cpu_bar = require("sub-components.cpu_bar")
 local ram_bar = require("sub-components.ram_bar")
+local temperature_bar = require("sub-components.temperature_bar")
 
 -- Helper function that changes the appearance of progress bars and their icons
 local function format_progress_bar(bar)
@@ -59,6 +61,7 @@ awful.screen.connect_for_each_screen(function(s)
 		{
 			-- Right widgets
 			format_progress_bar(cpu_bar),
+			format_progress_bar(temperature_bar),
 			format_progress_bar(ram_bar),
 			layout = wibox.layout.fixed.horizontal,
 			mytextclock,

@@ -1,0 +1,29 @@
+colors:
+  special:
+    seagreen: '#5fffaf'
+    deepgreen: '#005f5f'
+    gray100: '#1c1c1c'
+    gray75: '#303030'
+    gray80: '#3a3a3a'
+    gray50: '#8a8a8a'
+    gray25: '#9e9e9e'
+
+  normal: #Base color pallete
+    black: '#080808'
+    red: '#ff5f5f'
+    green: '#87d7af'
+    yellow: '#d7d787'
+    blue: '#5fafd7'
+    magenta: '#afafff'
+    cyan: '#5fd7d7'
+    white: '#dadada'
+
+  dim: #Dim hues
+    black: '#8a8a8a'
+    red: '#d75f5f'
+    green: '#afd7af'
+    yellow: '#d7d7af'
+    blue: '#87afd7'
+    magenta: '#afafd7'
+    cyan: '#87d7d7'
+    white: '#eeeeee'
