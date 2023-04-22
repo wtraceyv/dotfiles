@@ -4,7 +4,8 @@ export ZSH="/home/walter/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # robbyrussell agnoster half-life cmd-prompt garyblessington
 # ZSH_THEME="garyblessington"
-ZSH_THEME="../../.my-zsh-themes/guezwhoz/021011"
+# ZSH_THEME="../../.my-zsh-themes/guezwhoz/021011"
+ZSH_THEME="../../.my-zsh-themes/robbyrussell"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -49,12 +50,12 @@ alias py="python3"
 alias mst="TZ='America/Denver' date"
 
 # need specific tools/needs for these
-alias pic='(picom -b >/dev/null &)'
+alias pic='killall picom && (picom >/dev/null &) && echo success || (picom >/dev/null &)'
 alias temps="watch sensors"
 alias smooth='nvidia-force-comp-pipeline'
-alias 3s='3-screens.sh && nvidia-force-comp-pipeline' #FIXME: this just don't work
-alias red="redshift -O 4000K"
-alias nored="redshift -x"
+alias matrix='cmatrix -s -u 10'
+alias red="redshift -O 4000K -b .85:.85 -v"
+alias nored="redshift -x -v"
 alias wp="feh -g 640x480 -d -S filename ~/.wallpapers -A 'feh --bg-scale ~/.wallpapers/%n'"
 
 # Much more conveniently stage changes to config files
@@ -108,5 +109,9 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
+function three {
+	# manjaro home screen setup
+	smooth && pic && source .screenlayout/home.sh && red
+}
+
+space-invaders
