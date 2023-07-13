@@ -61,17 +61,6 @@ alias red="redshift -O 4000K -b .85:.85 -v"
 alias nored="redshift -x -v"
 alias wp="feh -g 640x480 -d -S filename ~/.wallpapers -A 'feh --bg-scale ~/.wallpapers/%n'"
 
-# Much more conveniently stage changes to config files
-function configStageAll {
-	cd ~
-	configs | grep config | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
-	configs | grep zshrc | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
-	configs | grep alacritty | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
-	configs | grep tmux | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
-	configs | grep .my-zsh-themes | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
-	configs | grep .wallpapers | cut -d ' ' -f 2- | xargs -I % sh -c 'git --git-dir=$HOME/.cfg/ --work-tree=$HOME add %'
-}
-
 function grun {
 	g++ -g --std=c++20 $1
 	./a.out
