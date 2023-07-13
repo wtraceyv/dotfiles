@@ -19,7 +19,7 @@ ZSH_TMUX_AUTOSTART=true
 source $ZSH/oh-my-zsh.sh
 
 # default browser?
-BROWSER=firefox-developer-edition
+BROWSER=chromium
 
 # able color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -41,10 +41,13 @@ alias neoa='neofetch --ascii_distro arch'
 alias neog='neofetch --ascii_distro gentoo'
 alias sus='systemctl suspend'
 alias vi="vim"
+alias xargs='xargs ' # now using xargs will give me access to all these aliases
 alias gits='git status'
 alias token-git-copy='cd ~/git && ls | grep token | xargs cat | xclip -sel c && cd -'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias configs='config status'
+alias configStage="configs | grep modified | cut -d ':' -f 2 | tr -d \" \" | xargs config add"
+alias configUnstage="configs | grep modified | cut -d ':' -f 2 | tr -d \" \" | xargs config restore --staged"
 alias py="python3"
 
 alias mst="TZ='America/Denver' date"
@@ -53,7 +56,7 @@ alias mst="TZ='America/Denver' date"
 alias pic='killall picom && (picom >/dev/null &) && echo success || (picom >/dev/null &)'
 alias temps="watch sensors"
 alias smooth='nvidia-force-comp-pipeline'
-alias matrix='cmatrix -s -u 10'
+alias matrix='cmatrix -sa -u 10 -C cyan'
 alias red="redshift -O 4000K -b .85:.85 -v"
 alias nored="redshift -x -v"
 alias wp="feh -g 640x480 -d -S filename ~/.wallpapers -A 'feh --bg-scale ~/.wallpapers/%n'"
@@ -112,6 +115,10 @@ source /usr/share/fzf/completion.zsh
 function three {
 	# manjaro home screen setup
 	smooth && pic && source .screenlayout/home.sh && red
+}
+
+function three-basic {
+	source .screenlayout/home.sh && red
 }
 
 space-invaders

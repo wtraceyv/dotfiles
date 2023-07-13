@@ -43,7 +43,7 @@ awful.screen.connect_for_each_screen(function(s)
 	s.mywibox = awful.wibar {
 		position = "top",
 		screen = s,
-		width = 550
+		width = 450
 	}
 	-- Add widgets to the wibox
 	s.mywibox:setup {
@@ -60,9 +60,9 @@ awful.screen.connect_for_each_screen(function(s)
 			tasklist.gen_tasklist(s),
 			{
 				-- Right widgets
-				format_progress_bar(cpu_bar),
-				format_progress_bar(temperature_bar),
-				format_progress_bar(ram_bar),
+				-- format_progress_bar(cpu_bar),
+				-- format_progress_bar(temperature_bar),
+				-- format_progress_bar(ram_bar),
 				layout = wibox.layout.fixed.horizontal,
 				mytextclock,
 				s.mylayoutbox,
