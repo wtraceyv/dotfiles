@@ -12,6 +12,7 @@ local cpu_bar = require("sub-components.cpu_bar")
 local ram_bar = require("sub-components.ram_bar")
 local temperature_bar = require("sub-components.temperature_bar")
 
+
 -- Helper function that changes the appearance of progress bars and their icons
 local function format_progress_bar(bar)
 	-- Since we will rotate the bars 90 degrees, width and height are reversed
@@ -26,6 +27,35 @@ local function format_progress_bar(bar)
 	}
 	return w
 end
+
+-- ******* bunch of cpu bar thinking
+
+local my_cpu_bar_inner = wibox.widget {
+	widget = wibox.container.radialprogressbar,
+	forced_width = dpi(40),
+	border_width = dpi(4),
+	color = "#AA0000",
+	border_color = "#34DCE6",
+	max_value = 100,
+	value = 50,
+}
+
+local my_cpu_bar = wibox.widget {
+	my_cpu_bar_inner,
+	{
+        text   = "CPU",
+        valign = "center",
+        align = "center",
+        widget = wibox.widget.textbox,
+    },
+	layout = wibox.layout.stack
+}
+
+awesome.connect_signal("evil::cpu", function(value) 
+	my_cpu_bar_inner.value = value;
+end)
+
+-- ******* END bunch of cpu bar thinking
 
 awful.screen.connect_for_each_screen(function(s)
 
@@ -43,7 +73,7 @@ awful.screen.connect_for_each_screen(function(s)
 	s.mywibox = awful.wibar {
 		screen = s,
 		height = dpi(40),
-		width = 450,
+		width = 500,
 		bg = "#00000000"
 	}
 	-- Add widgets to the wibox
@@ -64,10 +94,11 @@ awful.screen.connect_for_each_screen(function(s)
 				tasklist.gen_tasklist(s),
 				{
 					-- Right widgets
+					layout = wibox.layout.fixed.horizontal,
 					-- format_progress_bar(cpu_bar),
+					my_cpu_bar,
 					-- format_progress_bar(temperature_bar),
 					-- format_progress_bar(ram_bar),
-					layout = wibox.layout.fixed.horizontal,
 					mytextclock,
 					s.mylayoutbox,
 				},
