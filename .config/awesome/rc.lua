@@ -15,7 +15,9 @@ beautiful.init(theme_dir .. "theme.lua")
 require("keybinds")
 require("signals")
 
+-- TODO: use theme to set these
 require("themes.zen.wibar")
+require("themes.zen.sidedash")
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 local function set_wallpaper(s)
