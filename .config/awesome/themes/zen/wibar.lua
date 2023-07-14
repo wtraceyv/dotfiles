@@ -41,33 +41,39 @@ awful.screen.connect_for_each_screen(function(s)
 	local mytextclock = wibox.widget.textclock()
 	-- Create the wibox
 	s.mywibox = awful.wibar {
-		position = "top",
 		screen = s,
-		width = 450
+		height = dpi(40),
+		width = 450,
+		bg = "#00000000"
 	}
 	-- Add widgets to the wibox
 	s.mywibox:setup {
 		{
-			layout = wibox.layout.align.horizontal,
+			widget = wibox.container.background,
+			bg = "#00000088",
 			{
-				-- Left widgets
-				layout = wibox.layout.fixed.horizontal,
-				-- s.mytaglist,
-				taglist.gen_widget(s),
+				layout = wibox.layout.align.horizontal,
+				{
+					-- Left widgets
+					layout = wibox.layout.fixed.horizontal,
+					-- s.mytaglist,
+					taglist.gen_widget(s),
 
-			},
-			-- s.mytasklist, -- Middle widget
-			tasklist.gen_tasklist(s),
-			{
-				-- Right widgets
-				-- format_progress_bar(cpu_bar),
-				-- format_progress_bar(temperature_bar),
-				-- format_progress_bar(ram_bar),
-				layout = wibox.layout.fixed.horizontal,
-				mytextclock,
-				s.mylayoutbox,
-			},
+				},
+				-- s.mytasklist, -- Middle widget
+				tasklist.gen_tasklist(s),
+				{
+					-- Right widgets
+					-- format_progress_bar(cpu_bar),
+					-- format_progress_bar(temperature_bar),
+					-- format_progress_bar(ram_bar),
+					layout = wibox.layout.fixed.horizontal,
+					mytextclock,
+					s.mylayoutbox,
+				},
+			}
 		},
 		widget = wibox.container.margin,
+		top = dpi(12),
 	}
 end)
