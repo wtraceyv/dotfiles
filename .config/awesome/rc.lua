@@ -46,7 +46,7 @@ terminal = "alacritty" -- or "xfce-terminal", etc
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 editor = "vim" or os.getenv("EDITOR")
 editor_cmd = terminal .. " -e " .. editor
-internet_browser = "firefox-developer-edition"
+internet_browser = "chromium"
 
 -- the cover-your-ass menu
 myawesomemenu = {

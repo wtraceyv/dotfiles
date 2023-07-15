@@ -1,6 +1,7 @@
 local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
+local beautiful = require("beautiful")
 local helpers = require("helpers")
 
 local cpu_bar = require("sub-components.cpu_bar")
@@ -28,14 +29,24 @@ local dash_content = wibox.widget {
 	ram_bar,
 }
 
-sidedash = wibox({visible = false, ontop = true, type = "dock", screen = screen.primary})
--- TODO: use theme for these too
-sidedash.height = dpi(850)
-sidedash.width = dpi(350)
+sidedash = wibox({
+	visible = false, 
+	ontop = true, 
+	type = "normal", 
+	screen = screen.primary,
+	height = dpi(800),
+	width = dpi(350),
+	shape = helpers.rrect(10),
+})
 -- TODO: use theme to define what side
+awful.placement.right(sidedash, { margins = beautiful.useless_gap + dpi(5) })
+-- struts is a standard wm way to shorten the workarea (move clients out of way by shrinking their workarea)
+sidedash:struts {
+	right = dpi(350) + beautiful.useless_gap + dpi(5)
+}
+
+-- TODO: use theme for these too
 -- https://github.com/elenapan/dotfiles/blob/master/config/awesome/elemental/sidebar/lovelace.lua, line 311
-awful.placement.right(sidedash, { margins = dpi(45) })
-sidedash.shape = helpers.rrect(10)
 sidedash:setup {
 	widget = wibox.container.background,
 	bg = "#00000088",

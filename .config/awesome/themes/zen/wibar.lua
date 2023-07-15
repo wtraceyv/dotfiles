@@ -24,6 +24,7 @@ awful.screen.connect_for_each_screen(function(s)
 		height = dpi(40),
 		width = 500,
 		bg = "#00000000",
+		margins = 4
 	}
 	-- Add widgets to the wibox
 	s.mywibox:setup {

@@ -5,11 +5,11 @@ local ram = require("daemons.ram")
 
 local my_ram_bar_inner = wibox.widget {
 	widget = wibox.container.radialprogressbar,
-	border_width = dpi(4),
-	border_color = "#AA0000",
-	color = "#34DCE6",
+	border_width = dpi(8),
+	border_color = beautiful.ram_bar_fill,
+	color = beautiful.ram_bar_notfill,
 	max_value = 100,
-	value = 80,
+	value = 0,
 }
 
 local ram_string = "RAM 0%"
@@ -24,7 +24,7 @@ local ram_bar = wibox.widget {
     my_ram_bar_inner,
 	ram_textbox,
 	layout = wibox.layout.stack,
-	spacing = 20 
+	spacing = 30 
 }
 
 awesome.connect_signal("evil::ram", function(used)

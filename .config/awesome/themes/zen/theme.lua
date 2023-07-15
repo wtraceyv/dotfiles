@@ -7,6 +7,7 @@ dpi = require("beautiful.xresources").apply_dpi
 theme.tagnames = {"一", "二", "三", "四", "五", "六", "七", "八", "九"}
 
 theme.useless_gap = 5
+theme.wibar_margins = { dpi(30) }
 
 theme.font      = "Ubuntu Mono derivative Powerline 12"
 --theme.font      = "Noto Mono for Powerline 11"
@@ -14,19 +15,27 @@ theme.font      = "Ubuntu Mono derivative Powerline 12"
 -- some specific colors I like:
 local sexy_magenta = "#cd23b9"
 local deep_pink = "#ff1493"
+
 local sexy_focus_blue = "#22e5f7"
+local sexy_unfocus_blue = "#68B3B0"
 local sexy_rofi_purp = "#A05EB5"
+
 local aliz_red = "#f0544c"
+local aliz_red_dim = "#8C312C"
 local aliz_dark = "#1a1a1a88"
 local aliz_bg_focus = "#393939"
+
 local tokyo_green = "#26A98B"
+local tokyo_green_dim = "#114A3D"
 local old_dark_green = "#1e2320"
 
 -- general 
 theme.fg_normal  = "#f7f7f7"
+
 -- theme.fg_normal  = "#111111" 
 theme.fg_focus   = aliz_red 
 theme.fg_urgent  = "#fc4949"
+
 -- theme.bg_normal  = aliz_dark 
 theme.bg_normal = "#00000099"
 theme.bg_focus   = aliz_dark
@@ -42,6 +51,14 @@ theme.border_focus  = deep_pink
 -- titlebar
 theme.titlebar_bg_focus  = aliz_dark 
 theme.titlebar_bg_normal = "#3F3F3F"
+
+-- sidedash
+theme.cpu_bar_notfill = aliz_dark 
+theme.cpu_bar_fill = sexy_focus_blue
+theme.temp_bar_notfill = aliz_red_dim
+theme.temp_bar_fill = aliz_red
+theme.ram_bar_notfill = tokyo_green_dim
+theme.ram_bar_fill = tokyo_green
 
 -- There are other variable sets
 -- overriding the default one when

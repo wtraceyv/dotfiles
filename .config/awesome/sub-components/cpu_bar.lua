@@ -8,12 +8,11 @@ local dpi = require("beautiful.xresources").apply_dpi
 
 local my_cpu_bar_inner = wibox.widget {
 	widget = wibox.container.radialprogressbar,
-	forced_width = dpi(30),
-	border_width = dpi(4),
-	border_color = "#AA0000",
-	color = "#34DCE6",
+	border_width = dpi(8),
+	border_color = beautiful.cpu_bar_fill,
+	color = beautiful.cpu_bar_notfill,
 	max_value = 100,
-	value = 50,
+	value = 0,
 }
 
 local cpu_text_box = wibox.widget {
@@ -26,7 +25,7 @@ local cpu_bar = wibox.widget {
 	my_cpu_bar_inner,
 	cpu_text_box,
 	layout = wibox.layout.stack,
-	spacing = 20
+	spacing = 30
 }
 
 awesome.connect_signal("evil::cpu", function(value) 
