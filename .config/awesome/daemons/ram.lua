@@ -6,7 +6,7 @@
 --      total (integer - mega bytes)
 local awful = require("awful")
 
-local update_interval = 5
+local update_interval = 8
 -- Returns the used amount of ram in percentage
 -- TODO output of free is affected by system language. The following command
 -- works for any language:

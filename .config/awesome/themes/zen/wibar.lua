@@ -1,6 +1,7 @@
 local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
+local helpers = require("helpers")
 
 local taglist = require("themes.zen.taglist")
 local tasklist = require("themes.zen.tasklist")
@@ -22,7 +23,7 @@ awful.screen.connect_for_each_screen(function(s)
 		screen = s,
 		height = dpi(40),
 		width = 500,
-		bg = "#00000000"
+		bg = "#00000000",
 	}
 	-- Add widgets to the wibox
 	s.mywibox:setup {

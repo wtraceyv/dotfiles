@@ -103,11 +103,11 @@ source /usr/share/fzf/completion.zsh
 
 function three {
 	# manjaro home screen setup
-	smooth && pic && source .screenlayout/home.sh && red
+	smooth && pic && source .bin/screenlayout/home.sh && red
 }
 
 function three-basic {
-	source .screenlayout/home.sh && red
+	source .bin/screenlayout/home.sh && red
 }
 
 space-invaders
