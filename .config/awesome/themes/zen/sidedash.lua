@@ -18,11 +18,13 @@ local dash_content = wibox.widget {
 		valign = "center",
 		align = "center",
 		widget = wibox.widget.textbox,
+		forced_height = dpi(20)
 	},
 	{
 		widget = mytextclock,
 		valign = "center",
 		align = "center",
+		height = dpi(10)
 	},
 	cpu_bar,
 	temperature_bar,
@@ -49,7 +51,7 @@ sidedash:struts {
 -- https://github.com/elenapan/dotfiles/blob/master/config/awesome/elemental/sidebar/lovelace.lua, line 311
 sidedash:setup {
 	widget = wibox.container.background,
-	bg = "#00000088",
+	bg = beautiful.bg_normal,
 	layout = wibox.layout.flex.vertical,
 	dash_content,
 }

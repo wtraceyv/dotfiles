@@ -1,6 +1,7 @@
 local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
+local beautiful = require("beautiful")
 local helpers = require("helpers")
 
 local taglist = require("themes.zen.taglist")
@@ -19,13 +20,21 @@ awful.screen.connect_for_each_screen(function(s)
 
 	local mytextclock = wibox.widget.textclock()
 	-- Create the wibox
-	s.mywibox = awful.wibar {
+	local temp_wibox = awful.wibox {
 		screen = s,
-		height = dpi(40),
+		type = "normal",
+		height = dpi(32),
 		width = 500,
+		shape = helpers.rrect(8),
 		bg = "#00000000",
-		margins = 4
+		margins = dpi(5),
 	}
+	awful.placement.top(temp_wibox, { margins = dpi(6) })
+	-- temp_wibox:struts {
+	-- 	top = dpi(40)
+	-- }
+
+	s.mywibox = temp_wibox
 	-- Add widgets to the wibox
 	s.mywibox:setup {
 		{
@@ -46,11 +55,10 @@ awful.screen.connect_for_each_screen(function(s)
 					-- Right widgets
 					layout = wibox.layout.fixed.horizontal,
 					mytextclock,
-					s.mylayoutbox,
+					-- s.mylayoutbox,
 				},
 			}
 		},
 		widget = wibox.container.margin,
-		top = dpi(12),
 	}
 end)

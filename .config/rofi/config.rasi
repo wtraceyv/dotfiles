@@ -7,7 +7,7 @@ configuration {
 		close-on-delete: false;
 	}
 }
-@theme "macy"
+@theme "rofi-themes-collection/themes/squared-material-red.rasi"
 
 * {
 	// selected-normal-background: rgba ( 160, 94, 181, 100 % );

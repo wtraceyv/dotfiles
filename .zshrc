@@ -102,7 +102,10 @@ source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
 function three {
-	# manjaro home screen setup
+	smooth && source .bin/screenlayout/home.sh && red
+}
+
+function three-picom {
 	smooth && pic && source .bin/screenlayout/home.sh && red
 }
 
