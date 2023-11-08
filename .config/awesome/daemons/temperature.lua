@@ -5,7 +5,7 @@ local awful = require("awful")
 local update_interval = 8 
 local temp_script = [[
   sh -c "
-  sensors -u | grep temp1_input | tr -d ' ' | cut -d ':' -f2
+  sensors -u | grep temp1_input | tr -d ' ' | cut -d ':' -f2 | head -n 1
   "]]
 
 -- Periodically get temperature info

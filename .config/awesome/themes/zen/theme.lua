@@ -6,69 +6,78 @@ dpi = require("beautiful.xresources").apply_dpi
 
 theme.tagnames = {"一", "二", "三", "四", "五", "六", "七", "八", "九"}
 
-theme.useless_gap = 5
+theme.useless_gap = dpi(8)
 theme.wibar_margins = { dpi(30) }
 
 theme.font      = "Ubuntu Mono derivative Powerline 12"
 --theme.font      = "Noto Mono for Powerline 11"
 
 -- some specific colors I like:
+-- darks
+local dark_trans_bg = "#000000bb"
+
+-- blue/putp
 local sexy_magenta = "#cd23b9"
 local deep_pink = "#ff1493"
-
 local sexy_focus_blue = "#22e5f7"
 local sexy_unfocus_blue = "#68B3B0"
 local sexy_rofi_purp = "#A05EB5"
 
+-- aliz red
 local aliz_red = "#f0544c"
 local aliz_red_dim = "#8C312C"
 local aliz_dark = "#1a1a1a88"
 local aliz_bg_focus = "#393939"
 
+-- greeny
 local tokyo_green = "#26A98B"
 local tokyo_green_dim = "#114A3D"
 local old_dark_green = "#1e2320"
 
+-- tokyonight
+-- https://github.com/enkia/tokyo-night-vscode-theme
+local tokyonightstorm_bg = "#24283b"
+local tokyonightstorm_bg_trans = "#24283bdd"
+local tokyonightstorm_1 = "#f7768e"
+local tokyonightstorm_2 = "#ff9e64"
+local tokyonightstorm_3 = "#e0af68"
+local tokyonightstorm_4 = "#9ece6a"
+local tokyonightstorm_5 = "#73daca"
+local tokyonightstorm_6 = "#b4f9f8"
+local tokyonightstorm_7 = "#2ac3de"
+local tokyonightstorm_8 = "#7dcfff"
+local tokyonightstorm_9 = "#7aa2f7"
+local tokyonightstorm_10 = "#bb9af7"
+local tokyonightstorm_11 = "#c0caf5"
+local tokyonightstorm_12 = "#a9b1d6"
+local tokyonightstorm_13 = "#9aa5ce"
+local tokyonightstorm_14 = "#cfc9c2"
+local tokyonightstorm_15 = "#565f89"
+local tokyonightstorm_16 = "#414868"
+
 -- general 
 theme.fg_normal  = "#f7f7f7"
 
--- theme.fg_normal  = "#111111" 
-theme.fg_focus   = aliz_red 
+theme.special_text = tokyonightstorm_5
+
+theme.fg_focus   = tokyonightstorm_1
+theme.fg_focus_dim = tokyonightstorm_9
 theme.fg_urgent  = "#fc4949"
 
--- theme.bg_normal  = aliz_dark 
-theme.bg_normal = "#00000099"
+theme.bg_normal = tokyonightstorm_bg_trans
 theme.bg_focus   = aliz_dark
 theme.bg_urgent  = "#3F3F3F"
+theme.bg_urgent_trans  = tokyonightstorm_10 .. "77"
 theme.bg_systray = theme.bg_normal
 
--- theme.border_width  = dpi(2)
-theme.border_width  = 0 
-theme.border_normal = "#3F3F3F"
+theme.border_focus  = tokyonightstorm_1
+theme.border_width  = dpi(0)
+theme.border_normal = "#00000000"
 theme.border_marked = "#CC9393"
-theme.border_focus  = deep_pink 
 
 -- titlebar
-theme.titlebar_bg_focus  = aliz_dark 
-theme.titlebar_bg_normal = "#3F3F3F"
-
--- sidedash
-theme.cpu_bar_notfill = aliz_dark 
-theme.cpu_bar_fill = sexy_focus_blue
-theme.temp_bar_notfill = aliz_red_dim
-theme.temp_bar_fill = aliz_red
-theme.ram_bar_notfill = tokyo_green_dim
-theme.ram_bar_fill = tokyo_green
-
--- There are other variable sets
--- overriding the default one when
--- defined, the sets are:
--- [taglist|tasklist]_[bg|fg]_[focus|urgent|occupied|empty|volatile]
--- titlebar_[normal|focus]
--- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
--- Example:
---theme.taglist_bg_focus = "#CC9393"
--- }}}
+theme.titlebar_bg_focus  = aliz_dark
+theme.titlebar_bg_normal = aliz_dark
 
 -- {{{ Mouse finder
 theme.mouse_finder_color = "#CC9393"
@@ -91,6 +100,7 @@ theme.taglist_squares_unsel = themes_path .. "taglist/squarez.png"
 -- {{{ Misc
 theme.awesome_icon           = themes_path .. "awesome-icon.png"
 theme.menu_submenu_icon      = themes_path .. "default/submenu.png"
+
 
 -- {{{ Layout
 theme.layout_tile       = themes_path .. "layouts/tile.png"

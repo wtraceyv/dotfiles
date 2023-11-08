@@ -18,16 +18,17 @@ awful.screen.connect_for_each_screen(function(s)
 		awful.button({}, 4, function() awful.layout.inc(1) end),
 		awful.button({}, 5, function() awful.layout.inc(-1) end)))
 
-	local mytextclock = wibox.widget.textclock()
+	local mytextclock = awful.widget.textclock('<span color="' .. beautiful.special_text .. '">%a %m/%d %H:%M</span>')
+
 	-- Create the wibox
 	local temp_wibox = awful.wibox {
 		screen = s,
 		type = "normal",
 		height = dpi(32),
-		width = 500,
+		width = 170,
 		shape = helpers.rrect(8),
 		bg = "#00000000",
-		margins = dpi(5),
+		margins = dpi(10),
 	}
 	awful.placement.top(temp_wibox, { margins = dpi(6) })
 	-- temp_wibox:struts {
@@ -40,23 +41,24 @@ awful.screen.connect_for_each_screen(function(s)
 		{
 			widget = wibox.container.background,
 			-- TODO: use theme
-			bg = "#00000088",
+			bg = "#00000033",
 			{
 				layout = wibox.layout.align.horizontal,
 				{
 					-- Left widgets (taglist)
 					layout = wibox.layout.fixed.horizontal,
+					spacing = dpi(15),
 					taglist.gen_widget(s),
-
+					mytextclock,
 				},
 				-- Middle widget (open apps)
-				tasklist.gen_tasklist(s),
-				{
-					-- Right widgets
-					layout = wibox.layout.fixed.horizontal,
-					mytextclock,
-					-- s.mylayoutbox,
-				},
+				-- tasklist.gen_tasklist(s),
+				-- {
+				-- 	-- Right widgets
+				-- 	layout = wibox.layout.fixed.horizontal,
+				-- 	mytextclock,
+				-- 	-- s.mylayoutbox,
+				-- },
 			}
 		},
 		widget = wibox.container.margin,

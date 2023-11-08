@@ -30,8 +30,11 @@ taglist.gen_widget = function(s)
 	-- Create a taglist widget
 	mytaglist = awful.widget.taglist {
 		screen  = s,
-		filter  = awful.widget.taglist.filter.all,
+		filter  = function (t) return t.selected end,
 		buttons = taglist_buttons
+		-- For fun, I'm only showing the tag symbol I'm currently on.
+		-- Replace filter with the following to get all the tags showing again
+		-- filter  = awful.widget.taglist.filter.all,
 	}
 
 	return mytaglist

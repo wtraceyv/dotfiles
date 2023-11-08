@@ -46,18 +46,16 @@ alias gits='git status'
 alias token-git-copy='cd ~/git && ls | grep token | xargs cat | xclip -sel c && cd -'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias configs='config status'
-alias configStage="configs | grep modified | cut -d ':' -f 2 | tr -d \" \" | xargs config add"
-alias configUnstage="configs | grep modified | cut -d ':' -f 2 | tr -d \" \" | xargs config restore --staged"
 alias py="python3"
 
 alias mst="TZ='America/Denver' date"
 
 # need specific tools/needs for these
-alias pic='killall picom && (picom >/dev/null &) && echo success || (picom >/dev/null &)'
+alias pic='killall picom && (picom --daemon >/dev/null &) && echo success || (picom --daemon >/dev/null &)'
 alias temps="watch sensors"
 alias smooth='nvidia-force-comp-pipeline'
 alias matrix='cmatrix -sa -u 10 -C cyan'
-alias red="redshift -O 4000K -b .85:.85 -v"
+alias red="redshift -O 4000K -b .9:.9 -v"
 alias nored="redshift -x -v"
 alias wp="feh -g 640x480 -d -S filename ~/.wallpapers -A 'feh --bg-scale ~/.wallpapers/%n'"
 
@@ -102,7 +100,8 @@ source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
 function three {
-	smooth && source .bin/screenlayout/home.sh && red
+	# smooth && source .bin/screenlayout/home.sh && red
+	smooth && source .bin/screenlayout/temptwo.sh && red
 }
 
 function three-picom {

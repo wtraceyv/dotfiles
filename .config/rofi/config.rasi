@@ -7,7 +7,7 @@ configuration {
 		close-on-delete: false;
 	}
 }
-@theme "rofi-themes-collection/themes/squared-material-red.rasi"
+@theme "rofi-themes-collection/themes/simple-tokyonight.rasi"
 
 * {
 	// selected-normal-background: rgba ( 160, 94, 181, 100 % );
