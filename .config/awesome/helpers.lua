@@ -54,26 +54,6 @@ function helpers.client_menu_toggle()
     end
 end
 
--- TODO: 
--- Return a widget containing an image box for the svg,
--- but allow parameterizing its color (and other things if applicable)
-function helpers.flexible_svg(svg, width, height, container_padding, color)
-    local container_width = width + container_padding
-    local container_height = height + container_padding
-    local stylesheet = "rect { fill: " .. color .. "; }"
-
-    local svg_container = wibox.widget{
-        widget = wibox.widget.imagebox,
-        image = svg,
-        -- stylesheet = stylesheet,
-        -- resize = true,
-        -- forced_width = width,
-        -- forced_height = height
-    }
-
-    return svg_container
-end
-
 -- Escapes a string so that it can be displayed inside pango markup
 -- tags. Modified from:
 -- https://github.com/kernelsauce/turbo/blob/master/turbo/escape.lua

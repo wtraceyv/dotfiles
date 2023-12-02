@@ -3,7 +3,6 @@ local awful = require("awful")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
 local helpers = require("helpers")
-local svg_icons = require("themes/zen/icons/svg_icons")
 
 -- local mytextclock = wibox.widget.textclock()
 local mytextclock = awful.widget.textclock('<span color="' .. beautiful.special_text .. '">%a %b %d, %H:%M</span>')
@@ -31,15 +30,22 @@ local function gen_button(display_text)
 	return new_button
 end
 
--- TODO: This.. when I am more motivated
-local function gen_button_icon(svg, width, height, container_padding, color)
+local function gen_button_with_icon(icon_reference)
 	local new_button = wibox.widget{
-		helpers.flexible_svg(svg, width, height, container_padding, color),
-		-- bg = beautiful.bg_normal,
-		-- shape_border_width = 1, 
-		-- shape_border_color = beautiful.fg_normal, -- outline
+		{
+			{
+				{
+					widget = wibox.widget.imagebox,
+					image = icon_reference,
+				},
+				widget = wibox.container.margin,
+				margins = 10
+			},
+			widget = wibox.container.place,
+			halign = 'center'
+		},
 		shape = helpers.rrect(10), 
-		widget = wibox.container.background
+		widget = wibox.container.background,
 	}
 	new_button:connect_signal("mouse::enter", function(c) c:set_bg(beautiful.bg_urgent_trans) end)
 	new_button:connect_signal("mouse::leave", function(c) c:set_bg("#00000000") end)
@@ -47,19 +53,19 @@ local function gen_button_icon(svg, width, height, container_padding, color)
 	return new_button
 end
 
-local sleep_button = gen_button("Suspend")
-local poweroff_button = gen_button("Poweroff")
--- local poweroff_button = gen_button_icon(
--- 	svg_icons.example,
--- 	200, 200, 20,
--- 	beautiful.fg_focus
--- )
+local file_manager_button = gen_button_with_icon(beautiful.file_icon)
+local sleep_button = gen_button_with_icon(beautiful.sleep_icon)
+local poweroff_button = gen_button_with_icon(beautiful.poweroff_icon)
 
-local launch_spotify = gen_button("Spotify")
-local launch_insta = gen_button("Insta")
-local launch_yt = gen_button("YouTube")
+local launch_spotify = gen_button_with_icon(beautiful.spotify_icon)
+local launch_insta = gen_button_with_icon(beautiful.insta_icon)
+local launch_yt = gen_button_with_icon(beautiful.youtube_icon)
 local launch_server = gen_button("Launch Local Server")
 local kill_server = gen_button("Kill Local Server")
+
+file_manager_button:connect_signal("button::press", function (c, _, _, button)
+	if button == 1 then os.execute("thunar &") end
+end)
 
 sleep_button:connect_signal("button::press", function (c, _, _, button)
 	if button == 1 then os.execute("systemctl suspend") end
@@ -111,7 +117,7 @@ local dash_content = wibox.widget {
 		{
 			poweroff_button,
 			widget = wibox.container.margin,
-			margins = dpi(10)
+			margins = dpi(10),
 		},
 	},
 	{
@@ -123,6 +129,11 @@ local dash_content = wibox.widget {
 	{
 		widget = wibox.container.background,
 		layout = wibox.layout.flex.horizontal,
+		{
+			file_manager_button,
+			widget = wibox.container.margin,
+			margins = dpi(10)
+		},
 		{
 			launch_spotify,
 			widget = wibox.container.margin,
@@ -162,7 +173,7 @@ sidedash = wibox({
 	ontop = true, 
 	type = "normal", 
 	screen = screen.primary,
-	height = dpi(700),
+	height = dpi(650),
 	width = dpi(300),
 	shape = helpers.rrect(10),
 })

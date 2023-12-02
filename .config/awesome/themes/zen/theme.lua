@@ -98,9 +98,15 @@ theme.taglist_squares_unsel = themes_path .. "taglist/squarez.png"
 -- }}}
 
 -- {{{ Misc
-theme.awesome_icon           = themes_path .. "awesome-icon.png"
-theme.menu_submenu_icon      = themes_path .. "default/submenu.png"
+theme.awesome_icon      = themes_path .. "awesome-icon.png"
+theme.menu_submenu_icon = themes_path .. "default/submenu.png"
 
+theme.poweroff_icon		= themes_path .. "extra/power-off-solid.png"
+theme.sleep_icon		= themes_path .. "extra/moon-solid.png"
+theme.spotify_icon		= themes_path .. "extra/spotify.png"
+theme.insta_icon		= themes_path .. "extra/instagram.png"
+theme.youtube_icon		= themes_path .. "extra/youtube.png"
+theme.file_icon			= themes_path .. "extra/file-solid.png"
 
 -- {{{ Layout
 theme.layout_tile       = themes_path .. "layouts/tile.png"

@@ -13,9 +13,14 @@
 :set ai
 :set ttimeoutlen=5
 
-" status line specs
-" https://shapeshed.com/vim-statuslines/
+" evil mappings
+:map <C-Left> gT
+:map <C-Right> gt
+:map <C-t> :tabedit<cr>
+:map <C-w> :q<cr>
+:map <C-f> :FZF<cr>
 
+" https://shapeshed.com/vim-statuslines/
 " don't show typical bottom stuff
 set shortmess=F
 set noshowmode 

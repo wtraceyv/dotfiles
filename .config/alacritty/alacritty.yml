@@ -4,7 +4,7 @@ import:
 key_bindings:
   - { key: F11, action: ToggleFullscreen }
 window:
-  opacity: 0.9
+  opacity: 0.85
   padding:
     x: 4
     y: 4
@@ -13,34 +13,31 @@ font:
     family: 'Noto Mono for Powerline'
   size: 11.0
 colors:
-  # Default colors
+  cursor:
+    text: "#fefff2"
+    cursor: "#ffb86c"
+  selection:
+    text: "#e6e6e6"
+    background: "#555555"
   primary:
-    background: '0x24292e'
-    foreground: '0xd1d5da'
-
-  # Normal colors
+    background: "#292a2b"
+    foreground: "#e6e6e6"
   normal:
-    black: '0x24292e'
-    red: '0xf14c4c'
-    green: '0x23d18b'
-    yellow: '0xe2e210'
-    blue: '0x3b8eea'
-    magenta: '0xbc3fbc'
-    cyan: '0x29b7da'
-    white: '0xd1d5da'
-
-  # Bright colors
+    black: "#292a2b"
+    red: "#ff2c6d"
+    green: "#19f9d8"
+    yellow: "#ffb86c"
+    blue: "#45a9f9"
+    magenta: "#ff75b5"
+    cyan: "#6fc1ff"
+    white: "#e6e6e6"
   bright:
-    black: '0x666666'
-    red: '0xf14c4c'
-    green: '0x23d18b'
-    yellow: '0xf5f543'
-    blue: '0x3b8eea'
-    magenta: '0xd670d6'
-    cyan: '0x29b7da'
-    white: '0xd1d5da'
-
-  indexed_colors:
-    - { index: 16, color: '0xd18616' }
-    - { index: 17, color: '0xf14c4c' }
-theme: github_dark
+    black: "#555555"
+    red: "#ff2c6d"
+    green: "#19f9d8"
+    yellow: "#ffcc95"
+    blue: "#6fc1ff"
+    magenta: "#ff9ac1"
+    cyan: "#6fc1ff"
+    white: "#ffffff"
+theme: Panda

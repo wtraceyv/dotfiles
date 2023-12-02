@@ -24,6 +24,7 @@ awful.screen.connect_for_each_screen(function(s)
 	local temp_wibox = awful.wibox {
 		screen = s,
 		type = "normal",
+		ontop = false,
 		height = dpi(32),
 		width = 170,
 		shape = helpers.rrect(8),

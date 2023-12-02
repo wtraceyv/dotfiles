@@ -2,10 +2,10 @@
 export ZSH="/home/walter/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# robbyrussell agnoster half-life cmd-prompt garyblessington
-# ZSH_THEME="garyblessington"
+# robbyrussell agnoster half-life cmd-prompt kali-classic garyblessington
+# ZSH_THEME="agnoster"
 # ZSH_THEME="../../.my-zsh-themes/guezwhoz/021011"
-ZSH_THEME="../../.my-zsh-themes/robbyrussell"
+ZSH_THEME="../../.my-zsh-themes/kali-classic"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -112,4 +112,5 @@ function three-basic {
 	source .bin/screenlayout/home.sh && red
 }
 
-space-invaders
+# space-invaders
+colorpanes

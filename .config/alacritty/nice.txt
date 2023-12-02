@@ -1,0 +1,6 @@
+Panda
+github_dark
+Monokai.dark
+Material (anything)
+Nord
+Tokyonight (either)
