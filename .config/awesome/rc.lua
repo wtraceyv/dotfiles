@@ -14,12 +14,13 @@ beautiful.init(theme_dir .. "theme.lua")
 
 require("keybinds")
 require("signals")
+require("themes." .. theme.. ".wibar")
+require("themes." .. theme .. ".sidedash")
+-- require("sub-components.notes_container")
 
--- TODO: use theme to set these
-require("themes.zen.wibar")
-require("themes.zen.sidedash")
 
--- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
+-- ================= wallpaper ======================
+
 local function set_wallpaper(s)
   -- Use wallpaper defined in theme.lua no matter what
   -- if beautiful.wallpaper then
@@ -39,7 +40,7 @@ awful.screen.connect_for_each_screen(function (s)
   set_wallpaper(s)
 end)
 
--- ================= preferences ======================
+-- ================= app preferences ======================
 
 -- Default apps
 terminal = "alacritty" -- or "xfce-terminal", etc
@@ -87,7 +88,7 @@ awful.rules.rules = {
           type = { "normal", "dialog" }
       },
       properties = {
-          titlebars_enabled = false
+          titlebars_enabled = true
       }
   },
 }

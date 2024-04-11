@@ -1,3 +1,6 @@
+# PATH adds
+export PATH="$HOME/non-pac/imgapp:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/walter/.oh-my-zsh"
 
@@ -55,7 +58,7 @@ alias pic='killall picom && (picom --daemon >/dev/null &) && echo success || (pi
 alias temps="watch sensors"
 alias smooth='nvidia-force-comp-pipeline'
 alias matrix='cmatrix -sa -u 10 -C cyan'
-alias red="redshift -O 4000K -b .9:.9 -v"
+alias red="redshift -O 4000K -b .8:.8 -v"
 alias nored="redshift -x -v"
 alias wp="feh -g 640x480 -d -S filename ~/.wallpapers -A 'feh --bg-scale ~/.wallpapers/%n'"
 
@@ -91,6 +94,21 @@ function gnasm {
 	./a.out
 }
 
+function wacom-setup {
+	echo -n "Supply the STYLUS, and then PAD, id numbers with the command."
+	echo
+
+	xsetwacom --list devices
+	xsetwacom set "$1" rotate none
+	# mod HEAD-number to change mapped monitor
+	xsetwacom -v --set "$1" MapToOutput "HEAD-0"
+
+	# button 1 is center of circle, 2-9 are square buttons from top to bottom
+	xsetwacom --set $2 button 1 "key ctrl z"
+	
+	# TODO: figure out good maps for other buttons..
+}
+
 
 # activate syntax highlight
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -101,11 +119,7 @@ source /usr/share/fzf/completion.zsh
 
 function three {
 	# smooth && source .bin/screenlayout/home.sh && red
-	smooth && source .bin/screenlayout/temptwo.sh && red
-}
-
-function three-picom {
-	smooth && pic && source .bin/screenlayout/home.sh && red
+	smooth && source .bin/screenlayout/home.sh && red
 }
 
 function three-basic {
@@ -113,4 +127,4 @@ function three-basic {
 }
 
 # space-invaders
-colorpanes
+# colorpanes

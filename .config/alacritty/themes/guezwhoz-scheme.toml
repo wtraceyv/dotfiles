@@ -1,0 +1,28 @@
+[colors.dim]
+black = "#8a8a8a"
+blue = "#87afd7"
+cyan = "#87d7d7"
+green = "#afd7af"
+magenta = "#afafd7"
+red = "#d75f5f"
+white = "#eeeeee"
+yellow = "#d7d7af"
+
+[colors.normal]
+black = "#080808"
+blue = "#5fafd7"
+cyan = "#5fd7d7"
+green = "#87d7af"
+magenta = "#afafff"
+red = "#ff5f5f"
+white = "#dadada"
+yellow = "#d7d787"
+
+[colors.special]
+deepgreen = "#005f5f"
+gray100 = "#1c1c1c"
+gray25 = "#9e9e9e"
+gray50 = "#8a8a8a"
+gray75 = "#303030"
+gray80 = "#3a3a3a"
+seagreen = "#5fffaf"

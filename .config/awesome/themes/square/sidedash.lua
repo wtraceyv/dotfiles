@@ -110,6 +110,11 @@ local dash_content = wibox.widget {
 		align = "center",
 		height = dpi(10)
 	},
+	-- {
+	-- 	widget = wibox.widget.separator,
+	-- 	orientation = "horizontal",
+	-- 	span_ratio = .9,
+	-- },
 	{
 		widget = wibox.container.background,
 		layout = wibox.layout.flex.horizontal,
@@ -129,50 +134,6 @@ local dash_content = wibox.widget {
 			margins = dpi(10),
 		},
 	},
-	{
-		widget = wibox.widget.separator,
-		orientation = "horizontal",
-		span_ratio = .9,
-	},
-	{
-		widget = wibox.container.background,
-		layout = wibox.layout.flex.horizontal,
-		{
-			file_manager_button,
-			widget = wibox.container.margin,
-			margins = dpi(10)
-		},
-		{
-			launch_spotify,
-			widget = wibox.container.margin,
-			margins = dpi(10)
-		},
-		{
-			launch_insta,
-			widget = wibox.container.margin,
-			margins = dpi(10)
-		},
-		{
-			launch_yt,
-			widget = wibox.container.margin,
-			margins = dpi(10)
-		},
-	},
-	{
-		widget = wibox.widget.separator,
-		orientation = "horizontal",
-		span_ratio = .9,
-	},
-	{
-		launch_server,
-		widget = wibox.container.margin,
-		margins = dpi(10)
-	},
-	{
-		kill_server,
-		widget = wibox.container.margin,
-		margins = dpi(10)
-	},
 }
 
 sidedash = wibox({
@@ -180,15 +141,15 @@ sidedash = wibox({
 	ontop = true, 
 	type = "normal", 
 	screen = screen.primary,
-	height = dpi(650),
-	width = dpi(300),
-	shape = helpers.rrect(10),
+	height = dpi(300),
+	width = dpi(250),
+	-- shape = helpers.rrect(10),
 })
-awful.placement.right(sidedash, { margins = beautiful.useless_gap + dpi(5) })
+awful.placement.right(sidedash, { margins = beautiful.useless_gap + dpi(10) })
 
 -- struts is a standard wm way to shorten the workarea (move clients out of way by shrinking their workarea)
 sidedash:struts {
-	right = dpi(300) + beautiful.useless_gap + dpi(5)
+	right = dpi(265) + beautiful.useless_gap + dpi(5)
 }
 
 -- TODO: use theme for these too

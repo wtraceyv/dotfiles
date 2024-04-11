@@ -1,6 +1,3 @@
-local awful = require("awful")
-local gears = require("gears")
-
 local theme = {}
 local themes_path = os.getenv("HOME") .. "/.config/awesome/themes/zen/icons/"
 dpi = require("beautiful.xresources").apply_dpi
@@ -8,25 +5,18 @@ dpi = require("beautiful.xresources").apply_dpi
 local color_theme = "tokyonightstorm"
 local colors = require('themes.colors.' .. color_theme)
 
--- small tweak to make client shape theme-bound
-client.connect_signal("manage", function (c)
-	-- all clients rounded corners
-	c.shape = function(cr, w, h)
-		gears.shape.rounded_rect(cr, w, h, 10)
-	end
-end)
+theme.tagnames = {"1", "2", "3", "4", "5", "6", "7", "8", "9"}
 
-theme.tagnames = {"一", "二", "三", "四", "五", "六", "七", "八", "九"}
-theme.useless_gap = dpi(8)
+theme.useless_gap = 0
 theme.wibar_margins = { dpi(30) }
 theme.font      = "Ubuntu Mono derivative Powerline 12"
 theme.wallpaper = '~/.wallpapers/GhibliForest.jpg'
 
 local aliz_dark = "#1a1a1a88"
 
+-- general 
 theme.colors = colors
 
--- general 
 theme.fg_normal  = "#f7f7f7"
 
 theme.special_text = colors[4]
@@ -36,15 +26,16 @@ theme.fg_focus_dim = colors[8]
 theme.fg_urgent  = colors[4]
 
 theme.bg_normal = colors.bg_trans
-theme.bg_focus   = aliz_dark
-theme.bg_urgent  = "#3F3F3F"
+-- theme.bg_normal = colors.bg_trans
+theme.bg_focus   = colors.bg_trans
+theme.bg_urgent  = colors[2]
 theme.bg_urgent_trans  = colors[9] .. "77"
-theme.bg_systray = theme.bg_normal
+theme.bg_systray = colors[8]
 
 theme.border_focus  = colors[0]
-theme.border_width  = dpi(0)
-theme.border_normal = "#00000000"
-theme.border_marked = "#CC9393"
+theme.border_width  = dpi(3)
+theme.border_normal = colors.bg_trans
+theme.border_marked = colors[1]
 
 -- titlebar
 theme.titlebar_bg_focus  = aliz_dark

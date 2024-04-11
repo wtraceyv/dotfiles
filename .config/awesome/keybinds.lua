@@ -37,8 +37,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey, }, "s", hotkeys_popup.show_help,
         { description = "show help", group = "awesome" }),
     
-    awful.key({ modkey, }, "d", 
-        function() sidedash.visible = not sidedash.visible end, {}),
+    awful.key({ modkey, }, "d", function() sidedash.visible = not sidedash.visible end, {}),
 
     awful.key({ modkey, }, "Left", awful.tag.viewprev,
         { description = "view previous", group = "tag" }),
@@ -89,6 +88,9 @@ globalkeys = gears.table.join(
         { description = "reload awesome", group = "awesome" }),
     awful.key({ modkey, "Shift" }, "q", awesome.quit,
         { description = "quit awesome", group = "awesome" }),
+    awful.key({ modkey, }, "=", function() os.execute("i3lock-fancy-multimonitor -b=0x6") end,
+        { description = "lock screen"}),
+
     awful.key({ modkey, }, "l", function() awful.tag.incmwfact(0.05) end,
         { description = "increase master width factor", group = "layout" }),
     awful.key({ modkey, }, "h", function() awful.tag.incmwfact(-0.05) end,
