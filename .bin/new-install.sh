@@ -127,6 +127,7 @@ function setupGitAndConfigs {
 
 	echo "If you get errors about file conflicts, delete the local files causing the conflict."
 	echo -e "Then rerun the command ${Green}config checkout manjaro${NC} or applicable branch."
+	echo -e "If you're not a sudoer, then: ${Green}su -${NC}, then ${Green}usermod -a -G sudo <username>${NC}"
 
 	echo -e "${Purple}Cloning other git repos..${NC}"
 
