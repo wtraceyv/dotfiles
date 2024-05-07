@@ -1,3 +1,0 @@
-[submodule ".config/rofi/rofi-themes-collection"]
-	path = .config/rofi/rofi-themes-collection
-	url = https://github.com/newmanls/rofi-themes-collection.git

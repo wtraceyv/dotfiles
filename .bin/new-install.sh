@@ -85,12 +85,10 @@ function createOrMakeExecutableFolders {
 	rmdir $HOME/Pictures
 	rmdir $HOME/Videos
 
-	mkdir $HOME/Documents/Vault
 	mkdir $HOME/Documents/Media/Audio
 	mkdir $HOME/Documents/Media/Videos
 	mkdir $HOME/Documents/Media/Images
 	mkdir $HOME/Documents/Media/Models
-	mkdir $HOME/pass
 	mkdir $HOME/git
 	mkdir $HOME/non-pac
 	mkdir $HOME/non-pac/imgapp
@@ -122,7 +120,11 @@ function setupGitAndConfigs {
 	echo -e "Then rerun the command ${Green}config checkout manjaro${NC} or applicable branch."
 
 	echo -e "${Purple}Cloning other git repos..${NC}"
+
+	mkdir $HOME/pass
 	git clone https://github.com/wtraceyv/pass.git ~/pass
+
+	mkdir $HOME/Documents/Vault
 	git clone https://github.com/wtraceyv/obsidian-vault.git ~/Documents/Vault
 
 }
@@ -179,7 +181,7 @@ fi
 if [[ $options = *'t'* ]]; then
 	echo -e "${Purple}Installing terminal utilities.${NC}"
 
-	terminalUtils=('zsh' 'tmux' 'vim' 'fastfetch' 'fzf' 'btop' 'keepassxc' 'redshift' 'feh' 'cmatrix')
+	terminalUtils=('zsh' 'tmux' 'vim' 'fastfetch' 'fzf' 'btop' 'keepassxc' 'redshift' 'feh' 'cmatrix' 'python3')
 	installWithPackageManager "${terminalUtils[@]}"
 
 	# oh-my-zsh and syntax highlighting
@@ -206,7 +208,6 @@ fi
 
 if [[ $options = *'c'* ]]; then
 	echo -e "${Purple}Installing creative graphical utilities.${NC}"
-	# TODO: force proprietary code-oss regardless of distro for vscode, else open source one?
 	largeGraphicalUtils=('gimp' 'krita' 'inkscape' 'darktable' 'ardour' 'blender' 'xf86-input-wacom' 'picom' 'thunar')
 	installWithPackageManager "${largeGraphicalUtils[@]}"
 
@@ -247,8 +248,6 @@ fi
 
 # ------ install AUR programs I may want if I'm on arch -- #
 
-# TODO: How to add these for debian-based
-
 if [[ $options = *'a'* ]]; then
 	read -p "Do you want to install previous programs from the AUR (y/n)? " answer
 	case ${answer:0:1} in
@@ -264,11 +263,19 @@ if [[ $options = *'a'* ]]; then
 	esac	
 fi
 
+if [[ $options = *'d'* ]]; then
+	extraPrograms=('powerline-fonts' 'code' 'qimgv')
+	installWithPackageManager "${extraPrograms[@]}"
+	
+	sectionBreak
+fi
+
+
 
 # ------ to install awesome wm programs to go with configs -- #
 
 if [[ $options = *'w'* ]]; then
-	echo -e "${Purple}Installing window manager utilities.${NC}"
+	echo -e "${Purple}Installing AwesomeWM utilities.${NC}"
 	awesomewmUtils=('awesome' 'rofi' 'arandr')
 	installWithPackageManager "${awesomewmUtils[@]}"
 
