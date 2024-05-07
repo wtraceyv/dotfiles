@@ -1,6 +1,3 @@
-# PATH adds
-export PATH="$HOME/non-pac/imgapp:$PATH"
-
 # Path to your oh-my-zsh installation.
 export ZSH="/home/walter/.oh-my-zsh"
 
@@ -62,25 +59,6 @@ alias red="redshift -O 4000K -b .8:.8 -v"
 alias nored="redshift -x -v"
 alias wp="feh -g 640x480 -d -S filename ~/.wallpapers -A 'feh --bg-scale ~/.wallpapers/%n'"
 
-function grun {
-	g++ -g --std=c++20 $1
-	./a.out
-}
-
-# compile ATT assembly with gcc
-function gasm {
-	if [[ $# -lt 1 ]]
-	then
-		echo "Supply a file of assembly"
-		return
-	fi
-
-	gcc -c $1 -o inter.o
-	ld inter.o
-	rm inter.o
-	./a.out
-}
-
 function gnasm {
 	if [[ $# -lt 1 ]]
 	then
@@ -109,6 +87,14 @@ function wacom-setup {
 	# TODO: figure out good maps for other buttons..
 }
 
+function three {
+	smooth && source .bin/screenlayout/home.sh && red
+}
+
+function three-basic {
+	source .bin/screenlayout/home.sh && red
+}
+
 
 # activate syntax highlight
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -117,14 +103,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
-function three {
-	# smooth && source .bin/screenlayout/home.sh && red
-	smooth && source .bin/screenlayout/home.sh && red
-}
-
-function three-basic {
-	source .bin/screenlayout/home.sh && red
-}
 
 # space-invaders
 # colorpanes

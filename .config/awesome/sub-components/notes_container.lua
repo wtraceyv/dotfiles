@@ -10,15 +10,17 @@ local notes_block = require("sub-components.notes_block")
 ]]--
 
 local todo_text = [[
----------------------------
-
-Do Not Doom
-1. Insta
-2. YouTube
+Isaac songs!
+------------
+There is a Time
+Change the Weather (Isaac send)
+Where The Angels Fly (?)
+Revelator (supp. harm maybe)
+Call on Coyote
 ]]
 
 local todo_markup = [[
-<span color="]] .. beautiful.colors[9] .. [[" size="large">
+<span color="]] .. beautiful.colors[9] .. [[" size="xx-large">
 <span size="xx-large">
 todo
 </span>
@@ -78,7 +80,7 @@ function gen_notes_container(screen_index)
 		type = "normal",
 		screen = screen_index,
 		height = dpi(500),
-		width = dpi(1100),
+		width = dpi(900),
 		-- rounded box
 		shape = helpers.rrect(10)
 	})
@@ -88,8 +90,8 @@ function gen_notes_container(screen_index)
 		widget = wibox.container.background,
 		layout = wibox.layout.flex.horizontal,
 		todo_block,
-		hiragana_block,
-		katakana_block
+		-- hiragana_block,
+		-- katakana_block
 	}
 
 	return end_container

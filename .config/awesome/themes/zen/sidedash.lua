@@ -19,7 +19,8 @@ local function gen_button(display_text)
 		},
 		-- bg = beautiful.bg_normal,
 		-- shape_border_width = 1, 
-		-- shape_border_color = beautiful.fg_normal, -- outline
+		-- shape_border_color = beautiful. , -- outline
+
 		shape = helpers.rrect(10), 
 		widget = wibox.container.background
 	}
@@ -38,12 +39,12 @@ local function gen_button_with_icon(icon_reference)
 					image = icon_reference,
 				},
 				widget = wibox.container.margin,
-				margins = 10
+				margins = 12
 			},
 			widget = wibox.container.place,
-			halign = 'center'
+			halign = 'center',
 		},
-		shape = helpers.rrect(10), 
+		shape = helpers.rrect(15), 
 		widget = wibox.container.background,
 	}
 	new_button:connect_signal("mouse::enter", function(c) c:set_bg(beautiful.bg_urgent_trans) end)
@@ -79,25 +80,25 @@ poweroff_button:connect_signal("button::press", function (c, _, _, button)
 	if button == 1 then os.execute("poweroff") end
 end)
 
-launch_spotify:connect_signal("button::press", function (c, _, _, button)
-	if button == 1 then os.execute("chromium https://open.spotify.com &") end
-end)
+-- launch_spotify:connect_signal("button::press", function (c, _, _, button)
+-- 	if button == 1 then os.execute("chromium https://open.spotify.com &") end
+-- end)
 
-launch_insta:connect_signal("button::press", function (c, _, _, button)
-	if button == 1 then os.execute("chromium https://instagram.com &") end
-end)
+-- launch_insta:connect_signal("button::press", function (c, _, _, button)
+-- 	if button == 1 then os.execute("chromium https://instagram.com &") end
+-- end)
 
-launch_yt:connect_signal("button::press", function (c, _, _, button)
-	if button == 1 then os.execute("chromium https://youtube.com &") end
-end)
+-- launch_yt:connect_signal("button::press", function (c, _, _, button)
+-- 	if button == 1 then os.execute("chromium https://youtube.com &") end
+-- end)
 
-launch_server:connect_signal("button::press", function (c, _, _, button)
-	if button == 1 then os.execute("~/Desktop/serve/server-start.sh &") end
-end)
+-- launch_server:connect_signal("button::press", function (c, _, _, button)
+-- 	if button == 1 then os.execute("~/Desktop/serve/server-start.sh &") end
+-- end)
 
-kill_server:connect_signal("button::press", function (c, _, _, button)
-	if button == 1 then os.execute("~/Desktop/serve/server-kill.sh &") end
-end)
+-- kill_server:connect_signal("button::press", function (c, _, _, button)
+-- 	if button == 1 then os.execute("~/Desktop/serve/server-kill.sh &") end
+-- end)
 
 local dash_content = wibox.widget {
 	widget = wibox.container.margin,
@@ -129,50 +130,50 @@ local dash_content = wibox.widget {
 			margins = dpi(10),
 		},
 	},
-	{
-		widget = wibox.widget.separator,
-		orientation = "horizontal",
-		span_ratio = .9,
-	},
-	{
-		widget = wibox.container.background,
-		layout = wibox.layout.flex.horizontal,
-		{
-			file_manager_button,
-			widget = wibox.container.margin,
-			margins = dpi(10)
-		},
-		{
-			launch_spotify,
-			widget = wibox.container.margin,
-			margins = dpi(10)
-		},
-		{
-			launch_insta,
-			widget = wibox.container.margin,
-			margins = dpi(10)
-		},
-		{
-			launch_yt,
-			widget = wibox.container.margin,
-			margins = dpi(10)
-		},
-	},
-	{
-		widget = wibox.widget.separator,
-		orientation = "horizontal",
-		span_ratio = .9,
-	},
-	{
-		launch_server,
-		widget = wibox.container.margin,
-		margins = dpi(10)
-	},
-	{
-		kill_server,
-		widget = wibox.container.margin,
-		margins = dpi(10)
-	},
+	-- {
+	-- 	widget = wibox.widget.separator,
+	-- 	orientation = "horizontal",
+	-- 	span_ratio = .9,
+	-- },
+	-- {
+	-- 	widget = wibox.container.background,
+	-- 	layout = wibox.layout.flex.horizontal,
+	-- 	{
+	-- 		file_manager_button,
+	-- 		widget = wibox.container.margin,
+	-- 		margins = dpi(10)
+	-- 	},
+	-- 	{
+	-- 		launch_spotify,
+	-- 		widget = wibox.container.margin,
+	-- 		margins = dpi(10)
+	-- 	},
+	-- 	{
+	-- 		launch_insta,
+	-- 		widget = wibox.container.margin,
+	-- 		margins = dpi(10)
+	-- 	},
+	-- 	{
+	-- 		launch_yt,
+	-- 		widget = wibox.container.margin,
+	-- 		margins = dpi(10)
+	-- 	},
+	-- },
+	-- {
+	-- 	widget = wibox.widget.separator,
+	-- 	orientation = "horizontal",
+	-- 	span_ratio = .9,
+	-- },
+	-- {
+	-- 	launch_server,
+	-- 	widget = wibox.container.margin,
+	-- 	margins = dpi(10)
+	-- },
+	-- {
+	-- 	kill_server,
+	-- 	widget = wibox.container.margin,
+	-- 	margins = dpi(10)
+	-- },
 }
 
 sidedash = wibox({
@@ -180,7 +181,7 @@ sidedash = wibox({
 	ontop = true, 
 	type = "normal", 
 	screen = screen.primary,
-	height = dpi(650),
+	height = dpi(250),
 	width = dpi(300),
 	shape = helpers.rrect(10),
 })
