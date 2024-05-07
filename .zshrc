@@ -96,12 +96,13 @@ function three-basic {
 }
 
 
-# activate syntax highlight
+# activate syntax highlight (two places it could be that I've seen)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # have fzf for these
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+source ~/.bin/util/fzf/key-bindings.zsh
+source ~/.bin/util/fzf/completion.zsh
 
 
 # space-invaders

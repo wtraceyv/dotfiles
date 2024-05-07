@@ -79,12 +79,22 @@ if [[ $options = *'d'* ]]; then
 	distroInstallPhrase='sudo apt install'
 fi
 
+# make sure we have git and curl
+eval "$distroInstallPhrase git"
+eval "$distroInstallPhrase curl"
+
 # ------ Functions for later steps -- #
 
 function createOrMakeExecutableFolders {
 	rmdir $HOME/Pictures
 	rmdir $HOME/Videos
+	rmdir $HOME/Public
+	rmdir $HOME/Templates
+	rmdir $HOME/Music
+	rmdir $HOME/snap
 
+	mkdir $HOME/Documents
+	mkdir $HOME/Documents/Media
 	mkdir $HOME/Documents/Media/Audio
 	mkdir $HOME/Documents/Media/Videos
 	mkdir $HOME/Documents/Media/Images
@@ -93,8 +103,8 @@ function createOrMakeExecutableFolders {
 	mkdir $HOME/non-pac
 	mkdir $HOME/non-pac/imgapp
 	mkdir $HOME/non-pac/AUR
-	mkdir $HOME/non-pac/snap
 
+	# this all will only work if the git pull down worked
 	sudo chmod +x $HOME/.bin
 	sudo chmod +x $HOME/.bin/fun
 	sudo chmod +x $HOME/.bin/fun/*
@@ -112,9 +122,8 @@ function setupGitAndConfigs {
 	# from git instructions
 	echo ".cfg" >> $HOME/.gitignore
 	git clone --bare https://github.com/wtraceyv/dotfiles.git $HOME/.cfg
-	alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-	config config --local status.showUntrackedFiles no
-	config checkout manjaro
+	git --git-dir=$HOME/.cfg/ --work-tree=$HOME config --local status.showUntrackedFiles no
+	git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout manjaro
 
 	echo "If you get errors about file conflicts, delete the local files causing the conflict."
 	echo -e "Then rerun the command ${Green}config checkout manjaro${NC} or applicable branch."
@@ -135,7 +144,7 @@ function installWithPackageManager {
 	for i in "${packages[@]}"
 	do
 		# echo "$distroInstallPhrase $i"
-		echo "$distroInstallPhrase $i"
+		eval "$distroInstallPhrase $i"
 	done
 }
 
@@ -147,8 +156,8 @@ function installFromAUR {
 		case ${answer:0:1} in
 			y|Y )
 				# TODO: make it actually pull + makepkg -si
-				echo "git clone https://aur.archlinux.org/$i.git $HOME/non-pac/AUR"
-				echo "makepkg -si $HOME/non-pac/AUR/$i"
+				eval "git clone https://aur.archlinux.org/$i.git $HOME/non-pac/AUR"
+				eval "makepkg -si $HOME/non-pac/AUR/$i"
 			;;
 			* )
 				echo -e "${Purple}Not installing $i.${NC}"
@@ -167,11 +176,14 @@ if [[ $options = *'g'* ]]; then
 	read -p "Enter your git token to save it for later (you will have to enter it again in a moment): " token
 	# TODO: actually save token
 	echo -e "${Cyan}Saving token: ${token}${NC}"
+	echo "$token" >> $HOME/git/aa-git-token
 
 	# TODO: setupGitAndConfigs() call goes here
 	# TODO: createOrMakeExecutableFolders() call goes here
 	echo -e "${Purple}setupGitAndConfigs()${NC}"
+	setupGitAndConfigs
 	echo -e "${Purple}createOrMakeExecutableFolders()${NC}"
+	createOrMakeExecutableFolders
 
 	sectionBreak
 fi
@@ -184,10 +196,16 @@ if [[ $options = *'t'* ]]; then
 	terminalUtils=('zsh' 'tmux' 'vim' 'fastfetch' 'fzf' 'btop' 'keepassxc' 'redshift' 'feh' 'cmatrix' 'python3')
 	installWithPackageManager "${terminalUtils[@]}"
 
+	# os, pls don't override my shell stuff
+	sudo rm /etc/profile
+
+	# make zsh default so restarting the shell gets us closer
+	sudo chsh -s $(which zsh) $USER
+
 	# oh-my-zsh and syntax highlighting
-	curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-	zsh-highlighting-pack=('zsh-syntax-highlighting')
-	installWithPackageManager "${zsh-highlighting-pack[@]}"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	zshHighlightingPack=('zsh-syntax-highlighting')
+	installWithPackageManager "${zshHighlightingPack[@]}"
 
 	# optional add home term emulator
 	promptedTerminalUtils=('alacritty')
@@ -208,22 +226,23 @@ fi
 
 if [[ $options = *'c'* ]]; then
 	echo -e "${Purple}Installing creative graphical utilities.${NC}"
-	largeGraphicalUtils=('gimp' 'krita' 'inkscape' 'darktable' 'ardour' 'blender' 'xf86-input-wacom' 'picom' 'thunar')
+	# TODO: include gnome-disks/gnome-disk-utility (arch/debian)
+	largeGraphicalUtils=('gimp' 'krita' 'inkscape' 'darktable' 'ardour' 'blender' 'xf86-input-wacom' 'picom' 'thunar' 'fragments')
 	installWithPackageManager "${largeGraphicalUtils[@]}"
 
 	PS3="Select a browser to install: "
 	select browser in chromium firefox-developer-edition brave-browser none; do
 		case $browser in
 			chromium)
-			echo "$distroInstallPhrase chromium"
+			eval "$distroInstallPhrase chromium"
 			break
 			;;
 			firefox-developer-edition)
-			echo "$distroInstallPhrase firefox-developer-edition"
+			eval "$distroInstallPhrase firefox-developer-edition"
 			break
 			;;
 			brave-browser)
-			echo "$distroInstallPhrase brave-browser"
+			eval "$distroInstallPhrase brave-browser"
 			break
 			;;
 			none)
