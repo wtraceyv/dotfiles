@@ -8,6 +8,7 @@ configuration {
 	}
 }
 
+// @theme "nord-oneline.rasi"
 @theme "simple-tokyonight.rasi"
 
 * {

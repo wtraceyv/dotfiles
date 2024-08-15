@@ -34,12 +34,14 @@ window {
   location : northeast;
   width    : 280px;
   x-offset : -14px;
-  y-offset : 14px;
+  y-offset : 50px;
 
   background-color: @bg1;
   border: 1px;
   border-color: @bg3;
-  border-radius: 6px;
+
+  // border-radius: 6px;
+  // border-radius: 6px;
 }
 
 inputbar {

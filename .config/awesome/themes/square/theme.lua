@@ -5,9 +5,9 @@ dpi = require("beautiful.xresources").apply_dpi
 local color_theme = "tokyonightstorm"
 local colors = require('themes.colors.' .. color_theme)
 
-theme.tagnames = {"1", "2", "3", "4", "5", "6", "7", "8", "9"}
+--theme.tagnames = {"1", "2", "3", "4", "5", "6", "7", "8", "9"}
+theme.tagnames = {"一", "二", "三", "四", "五", "六", "七", "八", "九"}
 
-theme.useless_gap = 0
 theme.wibar_margins = { dpi(30) }
 theme.font      = "Ubuntu Mono derivative Powerline 12"
 theme.wallpaper = '~/.wallpapers/GhibliForest.jpg'
@@ -32,10 +32,18 @@ theme.bg_urgent  = colors[2]
 theme.bg_urgent_trans  = colors[9] .. "77"
 theme.bg_systray = colors[8]
 
-theme.border_focus  = colors[0]
-theme.border_width  = dpi(3)
-theme.border_normal = colors.bg_trans
+theme.useless_gap = dpi(0)
+
+theme.border_focus  = colors[9]
+theme.border_width  = dpi(2)
+-- theme.border_normal = colors.bg_trans
+theme.border_normal = colors[14]
 theme.border_marked = colors[1]
+
+theme.tasklist_bg_normal = colors.full_transparent
+theme.tasklist_bg_focus = colors.full_transparent
+theme.tasklist_fg_focus = colors[6]
+theme.tasklist_disable_task_name = true
 
 -- titlebar
 theme.titlebar_bg_focus  = aliz_dark

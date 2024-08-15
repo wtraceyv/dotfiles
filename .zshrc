@@ -37,6 +37,7 @@ alias c='clear'
 alias e='exit'
 alias l='ls -lah'
 alias li='ls -lh'
+alias ff='fastfetch'
 alias neoa='neofetch --ascii_distro arch'
 alias neog='neofetch --ascii_distro gentoo'
 alias sus='systemctl suspend'
@@ -59,6 +60,7 @@ alias red="redshift -O 4000K -b .8:.8 -v"
 alias nored="redshift -x -v"
 alias wp="feh -g 640x480 -d -S filename ~/.wallpapers -A 'feh --bg-scale ~/.wallpapers/%n'"
 
+# can't include gcc/c std functions with this
 function gnasm {
 	if [[ $# -lt 1 ]]
 	then
@@ -67,7 +69,7 @@ function gnasm {
 	fi
 
 	nasm -f elf32 -g $1 -o inter.o
-	ld -m elf_i386 -s -g inter.o
+	ld -m elf_i386 -g inter.o # -s strips the debugging symbols, but then gdb doesn't work
 	rm inter.o
 	./a.out
 }

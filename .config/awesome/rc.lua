@@ -9,7 +9,8 @@ require("awful.autofocus")
 -- ================= handle theme choices ======================
 
 local theme = "zen"
--- local theme = "square"
+--local theme = "square"
+
 local theme_dir = os.getenv("HOME") .. "/.config/awesome/themes/" .. theme .. "/"
 beautiful.init(theme_dir .. "theme.lua")
 

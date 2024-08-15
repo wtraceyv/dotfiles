@@ -1,0 +1,37 @@
+{
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "vim.useCtrlKeys": false,
+    "telemetry.telemetryLevel": "off",
+    "editor.fontFamily": " 'Droid Sans Mono', 'Noto Mono for Powerline','monospace', monospace",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tabSize": 4,
+    "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+    "editor.insertSpaces": false,
+    "glassit-linux.opacity": 90,
+    "glassit.alpha": 230,
+    "editor.minimap.enabled": false,
+    "C_Cpp.intelliSenseEngine": "enabled",
+    "[cpp]": {
+    
+    },
+    "editor.renderWhitespace": "none",
+    "update.mode": "none",
+    "extensions.ignoreRecommendations": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cmake.showConfigureWithDebuggerNotification": false,
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "dart.flutterSdkPath": "/home/walter/non-pac/other/flutter",
+    "cmake.configureOnOpen": false
+}

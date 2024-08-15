@@ -21,5 +21,6 @@ colors[15] = "#414868"
 
 colors.bg = "#24283b"
 colors.bg_trans = "#24283bce"
+colors.full_transparent = "#00000000"
 
 return colors
