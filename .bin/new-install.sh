@@ -17,6 +17,10 @@ White='\033[0;37m'        # White
 
 options=$1
 
+# pls set dis correctly
+explicitUser='walter'
+explicitHomeFolder='/home/walter'
+
 function sectionBreak {
 	echo '********************'
 }
@@ -86,44 +90,40 @@ eval "$distroInstallPhrase curl"
 # ------ Functions for later steps -- #
 
 function createOrMakeExecutableFolders {
-	rmdir $HOME/Pictures
-	rmdir $HOME/Videos
-	rmdir $HOME/Public
-	rmdir $HOME/Templates
-	rmdir $HOME/Music
-	rmdir $HOME/snap
+	rmdir $explicitHomeFolder/Pictures
+	rmdir $explicitHomeFolder/Videos
+	rmdir $explicitHomeFolder/Public
+	rmdir $explicitHomeFolder/Templates
+	rmdir $explicitHomeFolder/Music
+	rmdir $explicitHomeFolder/snap
 
-	mkdir $HOME/Documents
-	mkdir $HOME/Documents/Media
-	mkdir $HOME/Documents/Media/Audio
-	mkdir $HOME/Documents/Media/Videos
-	mkdir $HOME/Documents/Media/Images
-	mkdir $HOME/Documents/Media/Models
-	mkdir $HOME/git
-	mkdir $HOME/non-pac
-	mkdir $HOME/non-pac/imgapp
-	mkdir $HOME/non-pac/AUR
+	mkdir $explicitHomeFolder/Documents
+	mkdir $explicitHomeFolder/Documents/Media
+	mkdir $explicitHomeFolder/Documents/Media/Audio
+	mkdir $explicitHomeFolder/Documents/Media/Videos
+	mkdir $explicitHomeFolder/Documents/Media/Images
+	mkdir $explicitHomeFolder/Documents/Media/Models
+	mkdir $explicitHomeFolder/git
+	mkdir $explicitHomeFolder/non-pac
+	mkdir $explicitHomeFolder/non-pac/imgapp
+	mkdir $explicitHomeFolder/non-pac/AUR
+
+	# sometimes sudo makes root the owner of all these damn folders
+	# I need to be able to change them obviously!
+	sudo chown -R $explicitHomeFolder *
 
 	# this all will only work if the git pull down worked
-	sudo chmod +x $HOME/.bin
-	sudo chmod +x $HOME/.bin/fun
-	sudo chmod +x $HOME/.bin/fun/*
-	sudo chmod +x $HOME/.bin/screenlayout
-	sudo chmod +x $HOME/.bin/screenlayout/*
-	sudo chmod +x $HOME/.bin/new-install-scripts
-	sudo chmod +x $HOME/.bin/new-install-scripts/*
-	sudo chmod +x $HOME/.bin/util
-	sudo chmod +x $HOME/.bin/util/*
+	sudo chmod +x -R $explicitHomeFolder/.bin
 }
 
 function setupGitAndConfigs {
 	echo -e "${Purple}Downloading initial configs.${NC}"
 
 	# from git instructions
-	echo ".cfg" >> $HOME/.gitignore
-	git clone --bare https://github.com/wtraceyv/dotfiles.git $HOME/.cfg
-	git --git-dir=$HOME/.cfg/ --work-tree=$HOME config --local status.showUntrackedFiles no
-	git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout manjaro
+	echo ".cfg" >> $explicitHomeFolder/.gitignore
+	git clone --bare https://github.com/wtraceyv/dotfiles.git $explicitHomeFolder/.cfg
+	git --git-dir=$explicitHomeFolder/.cfg/ --work-tree=$explicitHomeFolder config --local status.showUntrackedFiles no
+	git --git-dir=$explicitHomeFolder/.cfg/ --work-tree=$explicitHomeFolder checkout manjaro
 
 	echo "If you get errors about file conflicts, delete the local files causing the conflict."
 	echo -e "Then rerun the command ${Green}config checkout manjaro${NC} or applicable branch."
@@ -131,20 +131,18 @@ function setupGitAndConfigs {
 
 	echo -e "${Purple}Cloning other git repos..${NC}"
 
-	mkdir $HOME/pass
+	mkdir $explicitHomeFolder/pass
 	git clone https://github.com/wtraceyv/pass.git ~/pass
 
-	mkdir $HOME/Documents/Vault
+	mkdir $explicitHomeFolder/Documents/Vault
 	git clone https://github.com/wtraceyv/obsidian-vault.git ~/Documents/Vault
 
 }
 
-# TODO: make it run real command
 function installWithPackageManager {
 	packages=("$@")
 	for i in "${packages[@]}"
 	do
-		# echo "$distroInstallPhrase $i"
 		eval "$distroInstallPhrase $i"
 	done
 }
@@ -156,9 +154,8 @@ function installFromAUR {
 		read -p "Fetch and install $i now (y/n)?" answer
 		case ${answer:0:1} in
 			y|Y )
-				# TODO: make it actually pull + makepkg -si
-				eval "git clone https://aur.archlinux.org/$i.git $HOME/non-pac/AUR"
-				eval "makepkg -si $HOME/non-pac/AUR/$i"
+				eval "git clone https://aur.archlinux.org/$i.git $explicitHomeFolder/non-pac/AUR"
+				eval "makepkg -si $explicitHomeFolder/non-pac/AUR/$i"
 			;;
 			* )
 				echo -e "${Purple}Not installing $i.${NC}"
@@ -168,7 +165,6 @@ function installFromAUR {
 	done
 }
 
-
 # ------------------------------------ #
 
 if [[ $options = *'g'* ]]; then
@@ -177,7 +173,7 @@ if [[ $options = *'g'* ]]; then
 	read -p "Enter your git token to save it for later (you will have to enter it again in a moment): " token
 	# TODO: actually save token
 	echo -e "${Cyan}Saving token: ${token}${NC}"
-	echo "$token" >> $HOME/git/aa-git-token
+	echo "$token" >> $explicitHomeFolder/git/aa-git-token
 
 	# TODO: setupGitAndConfigs() call goes here
 	# TODO: createOrMakeExecutableFolders() call goes here
@@ -194,14 +190,14 @@ fi
 if [[ $options = *'t'* ]]; then
 	echo -e "${Purple}Installing terminal utilities.${NC}"
 
-	terminalUtils=('zsh' 'tmux' 'vim' 'fastfetch' 'fzf' 'btop' 'keepassxc' 'redshift' 'feh' 'cmatrix' 'python3')
+
 	installWithPackageManager "${terminalUtils[@]}"
 
 	# os, pls don't override my shell stuff
 	sudo rm /etc/profile
 
 	# make zsh default so restarting the shell gets us closer
-	sudo chsh -s $(which zsh) $USER
+	sudo chsh -s $(which zsh) $explicitUser
 
 	# oh-my-zsh and syntax highlighting
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -228,7 +224,7 @@ fi
 if [[ $options = *'c'* ]]; then
 	echo -e "${Purple}Installing creative graphical utilities.${NC}"
 	# TODO: include gnome-disks/gnome-disk-utility (arch/debian)
-	largeGraphicalUtils=('gimp' 'krita' 'inkscape' 'darktable' 'ardour' 'blender' 'xf86-input-wacom' 'picom' 'thunar' 'fragments')
+	largeGraphicalUtils=('gimp' 'krita' 'inkscape' 'darktable' 'ardour' 'blender' 'xf86-input-wacom' 'fragments')
 	installWithPackageManager "${largeGraphicalUtils[@]}"
 
 	PS3="Select a browser to install: "
@@ -258,7 +254,7 @@ if [[ $options = *'c'* ]]; then
 	sectionBreak
 
 	fetchYourOwnImageapps=('Obsidian' 'Balena Etcher')
-	echo -e "If you need them, fetch below image apps online and place at ${Cyan}$HOME/non-pac/imgapp${NC}"
+	echo -e "If you need them, fetch below image apps online and place at ${Cyan}$explicitHomeFolder/non-pac/imgapp${NC}"
 	for i in "${fetchYourOwnImageapps[@]}"
 	do
 		echo "- $i"
@@ -272,7 +268,7 @@ if [[ $options = *'a'* ]]; then
 	read -p "Do you want to install previous programs from the AUR (y/n)? " answer
 	case ${answer:0:1} in
 		y|Y )
-			AURprograms=('powerline-fonts-git' 'nerd-fonts-arimo' 'visual-studio-code-bin' 'qimgv' 'spotify-player')
+			AURprograms=('powerline-fonts-git' 'nerd-fonts-arimo' 'visual-studio-code-bin' 'qimgv')
 			installFromAUR "${AURprograms[@]}"
 			
 			sectionBreak
@@ -296,7 +292,7 @@ fi
 
 if [[ $options = *'w'* ]]; then
 	echo -e "${Purple}Installing AwesomeWM utilities.${NC}"
-	awesomewmUtils=('awesome' 'rofi' 'arandr')
+	awesomewmUtils=('awesome' 'rofi' 'picom' 'thunar' 'arandr')
 	installWithPackageManager "${awesomewmUtils[@]}"
 
 	sectionBreak
