@@ -90,11 +90,11 @@ function wacom-setup {
 }
 
 function three {
-	smooth && source .bin/screenlayout/home.sh && red
+	smooth && source ~/.bin/screenlayout/home.sh && red
 }
 
 function three-basic {
-	source .bin/screenlayout/home.sh && red
+	source ~/.bin/screenlayout/home.sh && red
 }
 
 

@@ -1,4 +1,4 @@
-import = ["/home/walter/.config/alacritty/themes/one_dark.toml"]
+import = ["/home/walter/.config/alacritty/themes/tokyo-night.toml"]
 
 [font]
 size = 11.0

@@ -1,0 +1,883 @@
+{
+   "checksum": "d130f3d12a9dac5c20d3c252daf9be8e",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13277929951000000",
+            "date_last_used": "13372006440024272",
+            "guid": "e6653c22-770d-45f1-af49-284162f97e2d",
+            "id": "9",
+            "name": "Spotify",
+            "type": "url",
+            "url": "https://open.spotify.com/"
+         }, {
+            "children": [ {
+               "date_added": "13300421313000000",
+               "date_last_used": "13371928774002368",
+               "guid": "d2d27725-ff4e-465a-aa08-01854d9d0b05",
+               "id": "6",
+               "name": "Mail",
+               "type": "url",
+               "url": "https://mail.google.com/mail/u/0/#inbox"
+            }, {
+               "date_added": "13331349585000000",
+               "date_last_used": "13371423783329301",
+               "guid": "90a071e2-8063-408f-a836-1ee5359631b4",
+               "id": "7",
+               "name": "Drive",
+               "type": "url",
+               "url": "https://drive.google.com/drive/u/0/my-drive"
+            }, {
+               "date_added": "13331349610000000",
+               "date_last_used": "13371154407666850",
+               "guid": "1e7a6f8b-0096-4379-a649-8c8e61e34aec",
+               "id": "8",
+               "name": "Calendar",
+               "type": "url",
+               "url": "https://calendar.google.com/calendar/u/0/r"
+            } ],
+            "date_added": "13333474536039137",
+            "date_last_used": "0",
+            "date_modified": "0",
+            "guid": "88cc503b-c126-484e-bade-1a81d81d6f2d",
+            "id": "5",
+            "name": "Google",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13366913420928344",
+               "date_last_used": "13372010307646209",
+               "guid": "a5ca9155-d0fc-4eca-a7a2-014b79fa1987",
+               "id": "123",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Trello | TODO Now",
+               "type": "url",
+               "url": "https://trello.com/b/BsguflPR/todo-now"
+            }, {
+               "date_added": "13340128326927338",
+               "date_last_used": "13372010335358513",
+               "guid": "68cacad8-8d17-45e5-9da0-822186aba322",
+               "id": "86",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Trello | Programming",
+               "type": "url",
+               "url": "https://trello.com/w/personalprogramming11"
+            } ],
+            "date_added": "13333474536039684",
+            "date_last_used": "0",
+            "date_modified": "13370406463781902",
+            "guid": "4430a5f2-4dc7-484c-acca-a19637f01768",
+            "id": "10",
+            "name": "Trello",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "children": [ {
+                  "date_added": "13286055635000000",
+                  "date_last_used": "13371877249111077",
+                  "guid": "3895493a-23d2-4cf6-8c92-e2792abfb30e",
+                  "id": "15",
+                  "name": "Git",
+                  "type": "url",
+                  "url": "https://github.com/wtraceyv"
+               }, {
+                  "date_added": "13296409733000000",
+                  "date_last_used": "13345322304700599",
+                  "guid": "8713b62c-b730-492f-afdc-70b231109995",
+                  "id": "16",
+                  "name": "Neetcode",
+                  "type": "url",
+                  "url": "https://neetcode.io/"
+               }, {
+                  "date_added": "13344050753735352",
+                  "date_last_used": "13348347419353663",
+                  "guid": "604d7e90-8e49-4a98-a984-f504998aa027",
+                  "id": "102",
+                  "meta_info": {
+                     "power_bookmark_meta": ""
+                  },
+                  "name": "Hack The Box :: Machines",
+                  "type": "url",
+                  "url": "https://app.hackthebox.com/machines"
+               }, {
+                  "date_added": "13370406463781902",
+                  "date_last_used": "13370567705690375",
+                  "guid": "d35e61e9-475d-4294-964f-09e3ae74aeb4",
+                  "id": "125",
+                  "meta_info": {
+                     "power_bookmark_meta": ""
+                  },
+                  "name": "Kaggle Learn",
+                  "type": "url",
+                  "url": "https://www.kaggle.com/learn"
+               }, {
+                  "date_added": "13370652243822488",
+                  "date_last_used": "0",
+                  "guid": "9310be64-114b-4ed5-8197-9a15c79c900b",
+                  "id": "127",
+                  "meta_info": {
+                     "power_bookmark_meta": ""
+                  },
+                  "name": "Practical Deep Learning for Coders - Practical Deep Learning",
+                  "type": "url",
+                  "url": "https://course.fast.ai/"
+               }, {
+                  "date_added": "13321209978000000",
+                  "date_last_used": "13344829814631995",
+                  "guid": "9694af1d-d83b-4e4b-a62e-3fc41a47fba5",
+                  "id": "17",
+                  "name": "Awesome Wallpapers - wallhaven.cc",
+                  "type": "url",
+                  "url": "https://wallhaven.cc/"
+               }, {
+                  "children": [ {
+                     "date_added": "13337191027876635",
+                     "date_last_used": "13341255370144289",
+                     "guid": "75ffb03d-0de9-431d-91c5-b6c509ddc75a",
+                     "id": "82",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "The Book of Shaders",
+                     "type": "url",
+                     "url": "https://thebookofshaders.com/"
+                  }, {
+                     "date_added": "13340054052806070",
+                     "date_last_used": "13340129953427687",
+                     "guid": "3a563de0-62ad-4034-a8f5-ad2bebc778c3",
+                     "id": "84",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Realtime Colors",
+                     "type": "url",
+                     "url": "https://www.realtimecolors.com/?colors=050315-fbfbfe-2f27ce-dedcff-433bff"
+                  }, {
+                     "date_added": "13340131355236920",
+                     "date_last_used": "13342237821879723",
+                     "guid": "0ebaf8f0-9fa2-4c3f-bd50-b796d4ee397e",
+                     "id": "87",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "CSS Grid Generator",
+                     "type": "url",
+                     "url": "https://grid.layoutit.com/"
+                  }, {
+                     "date_added": "13342316679681560",
+                     "date_last_used": "13342377730750244",
+                     "guid": "7826174e-b4bf-4c77-84c9-0a37629ec0bd",
+                     "id": "100",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Toptal CSS3 Maker",
+                     "type": "url",
+                     "url": "https://www.toptal.com/developers/css3maker/gallery"
+                  }, {
+                     "date_added": "13346224321723318",
+                     "date_last_used": "13369460318631636",
+                     "guid": "3ffe8d07-ee66-41c0-8e7f-fe610de9016c",
+                     "id": "106",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Spline - 3D Design tool in the browser with real-time collaboration",
+                     "type": "url",
+                     "url": "https://spline.design/"
+                  } ],
+                  "date_added": "13346224358067691",
+                  "date_last_used": "0",
+                  "date_modified": "13347947527933875",
+                  "guid": "efd4f3e9-7f92-4ecc-bfe3-b7809617a66e",
+                  "id": "107",
+                  "name": "Design and Graphics",
+                  "type": "folder"
+               }, {
+                  "children": [ {
+                     "date_added": "13334122086900466",
+                     "date_last_used": "0",
+                     "guid": "e692a604-7f73-4f67-89c9-af9ed3cd9271",
+                     "id": "68",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Spotify Streaming iPod Classic ",
+                     "type": "url",
+                     "url": "https://www.youtube.com/watch?v=ZxdhG1OhVng"
+                  }, {
+                     "date_added": "13256771361000000",
+                     "date_last_used": "13351979349680026",
+                     "guid": "c6451c7a-3863-4d2d-969c-db8029a4c3d6",
+                     "id": "33",
+                     "name": "GravityGame",
+                     "type": "url",
+                     "url": "https://gitlab.com/noahmigoski/gravity-game"
+                  } ],
+                  "date_added": "13334122081860070",
+                  "date_last_used": "0",
+                  "date_modified": "13346224363927550",
+                  "guid": "947fd653-3280-4128-8935-645496e7c272",
+                  "id": "67",
+                  "name": "Full Projects",
+                  "type": "folder"
+               }, {
+                  "children": [ {
+                     "date_added": "13320123934000000",
+                     "date_last_used": "13333643638320855",
+                     "guid": "efc3aac5-5d75-48e9-896b-67f095d10f6f",
+                     "id": "19",
+                     "name": "WiFi Kit 32 (V3) – Heltec Automation",
+                     "type": "url",
+                     "url": "https://heltec.org/project/wifi-kit-32-v3/"
+                  }, {
+                     "date_added": "13320211250000000",
+                     "date_last_used": "0",
+                     "guid": "d77a81e1-3e5b-4114-a6b9-7517c4368807",
+                     "id": "20",
+                     "name": "esp-idf interface code",
+                     "type": "url",
+                     "url": "https://github.com/espressif/esp-idf/tree/master/components"
+                  }, {
+                     "date_added": "13321912552000000",
+                     "date_last_used": "13333640211848762",
+                     "guid": "279b8944-519f-4fd5-bde4-903a73e8896e",
+                     "id": "21",
+                     "name": "ESP32 OLED Library",
+                     "type": "url",
+                     "url": "https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/src/oled"
+                  }, {
+                     "date_added": "13321912571000000",
+                     "date_last_used": "13333640211101067",
+                     "guid": "b5cef4df-ac7f-4589-a087-d03795843cfb",
+                     "id": "22",
+                     "name": "ESP32 Arduino Core",
+                     "type": "url",
+                     "url": "https://github.com/espressif/arduino-esp32/tree/master/cores/esp32"
+                  }, {
+                     "date_added": "13321926138000000",
+                     "date_last_used": "0",
+                     "guid": "1cb7219b-8270-4254-aed7-a573ad26f49e",
+                     "id": "23",
+                     "name": "esp-idf LCD API",
+                     "type": "url",
+                     "url": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-reference/peripherals/lcd.html"
+                  }, {
+                     "date_added": "13333779120489885",
+                     "date_last_used": "0",
+                     "guid": "6750ad48-c3c3-4bf6-acc9-311764981346",
+                     "id": "63",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "U8glib library for monochrome displays",
+                     "type": "url",
+                     "url": "https://github.com/olikraus/u8g2"
+                  }, {
+                     "date_added": "13321932652000000",
+                     "date_last_used": "13333647052276217",
+                     "guid": "03f20915-14da-41cb-9321-f2a3037993c5",
+                     "id": "24",
+                     "name": "ESP32 Schematic",
+                     "type": "url",
+                     "url": "https://resource.heltec.cn/download/WiFi_Kit_32_V3/HTIT-WB32_V3_Schematic_Diagram.pdf"
+                  }, {
+                     "date_added": "13322364495000000",
+                     "date_last_used": "13333647151853892",
+                     "guid": "797187bf-daa2-4f97-b2c8-bf70548ea678",
+                     "id": "25",
+                     "name": "SSD1306 Datasheet",
+                     "type": "url",
+                     "url": "https://components101.com/sites/default/files/component_datasheet/SSD1306-OLED-Display-Datasheet.pdf"
+                  } ],
+                  "date_added": "13333474536040011",
+                  "date_last_used": "0",
+                  "date_modified": "13333854917234634",
+                  "guid": "21c78444-2cc1-4eac-998c-f99c72c6acbd",
+                  "id": "18",
+                  "name": "ESP32",
+                  "type": "folder"
+               }, {
+                  "children": [ {
+                     "date_added": "13322019705000000",
+                     "date_last_used": "0",
+                     "guid": "b2e41bd3-bc08-4719-9482-cfd5b94203e6",
+                     "id": "27",
+                     "name": "JUCE",
+                     "type": "url",
+                     "url": "https://github.com/juce-framework/JUCE"
+                  }, {
+                     "date_added": "13330381623000000",
+                     "date_last_used": "0",
+                     "guid": "a4eae864-cbd3-4180-8c3b-94ad1d87c698",
+                     "id": "28",
+                     "name": "Coding Standards - JUCE",
+                     "type": "url",
+                     "url": "https://juce.com/coding-standards/"
+                  }, {
+                     "date_added": "13322019438000000",
+                     "date_last_used": "13364094560304807",
+                     "guid": "65de469a-75f2-48e1-9bb0-292b44ed730c",
+                     "id": "29",
+                     "name": "JUCE: Loop audio AudioSampleBuffer",
+                     "type": "url",
+                     "url": "https://docs.juce.com/master/tutorial_looping_audio_sample_buffer.html"
+                  }, {
+                     "date_added": "13330385123000000",
+                     "date_last_used": "13364095740922807",
+                     "guid": "e79ebf17-81be-4445-9350-ca2924a484d9",
+                     "id": "30",
+                     "name": "GUI layout techniques",
+                     "type": "url",
+                     "url": "https://docs.juce.com/master/tutorial_rectangle_advanced.html"
+                  }, {
+                     "date_added": "13330485579000000",
+                     "date_last_used": "0",
+                     "guid": "1fea7d49-dcf8-45f0-bbb7-e95e6f7bb5ff",
+                     "id": "31",
+                     "name": "juce_cmake_vscode_example: A boilerplate for developing audio plugins with JUCE & CMake & VSCode",
+                     "type": "url",
+                     "url": "https://github.com/tomoyanonymous/juce_cmake_vscode_example"
+                  } ],
+                  "date_added": "13333474536040159",
+                  "date_last_used": "0",
+                  "date_modified": "0",
+                  "guid": "65142327-0de0-4559-a104-e2afb25ae73c",
+                  "id": "26",
+                  "name": "JUCE",
+                  "type": "folder"
+               }, {
+                  "children": [ {
+                     "date_added": "13322445980000000",
+                     "date_last_used": "13346724591466265",
+                     "guid": "7d88dc58-9a1f-489c-9738-dc98da54ff00",
+                     "id": "36",
+                     "name": "Very Pretty and Round",
+                     "type": "url",
+                     "url": "https://github.com/elenapan/dotfiles"
+                  }, {
+                     "date_added": "13333854917234634",
+                     "date_last_used": "13334094344653374",
+                     "guid": "a2e56c58-ba85-4273-b692-673a3e234c70",
+                     "id": "65",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Awesome WM Declarative Style",
+                     "type": "url",
+                     "url": "https://awesomewm.org/apidoc/documentation/03-declarative-layout.md.html"
+                  }, {
+                     "date_added": "13340402854974804",
+                     "date_last_used": "0",
+                     "guid": "71e14fe9-6585-457c-9bcb-9507a8bddda9",
+                     "id": "89",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Buttons",
+                     "type": "url",
+                     "url": "http://pavelmakhov.com/awesome-wm-widgets/#tabAwesome_Buttons"
+                  }, {
+                     "date_added": "13341462537250037",
+                     "date_last_used": "13341534211298127",
+                     "guid": "8915d247-24fa-4d87-84bb-03e6cf096dee",
+                     "id": "96",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Change Color of SVG Icon : r/awesomewm",
+                     "type": "url",
+                     "url": "https://www.reddit.com/r/awesomewm/comments/baga7l/change_color_of_svg_icon/"
+                  }, {
+                     "date_added": "13341535728594744",
+                     "date_last_used": "0",
+                     "guid": "52c78396-e53f-4c4d-8d89-d8943655d8b6",
+                     "id": "98",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Font Awesome",
+                     "type": "url",
+                     "url": "https://fontawesome.com/icons"
+                  } ],
+                  "date_added": "13333474536040298",
+                  "date_last_used": "0",
+                  "date_modified": "13342316679681560",
+                  "guid": "6f79f6cb-4419-4000-9a5b-a3cd50c75bec",
+                  "id": "35",
+                  "name": "Cool Desktops",
+                  "type": "folder"
+               }, {
+                  "children": [ {
+                     "date_added": "13333498965554102",
+                     "date_last_used": "13363127639651712",
+                     "guid": "7e3a4423-8671-4c32-84db-a419a8413c0f",
+                     "id": "57",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "x64_cheatsheet.pdf",
+                     "type": "url",
+                     "url": "https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf"
+                  }, {
+                     "date_added": "13333499462354182",
+                     "date_last_used": "13362761678824139",
+                     "guid": "e8305ae6-d79f-42a9-b22c-a9a8b6f9a696",
+                     "id": "58",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Sample nasm programs",
+                     "type": "url",
+                     "url": "https://redirect.cs.umbc.edu/portal/help/nasm/sample.shtml"
+                  }, {
+                     "date_added": "13333499683180183",
+                     "date_last_used": "13362761523535291",
+                     "guid": "1e3c787e-21d9-485a-be60-fd9f88267f6f",
+                     "id": "59",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Linux System Call Table",
+                     "type": "url",
+                     "url": "https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md#x86-32_bit"
+                  }, {
+                     "date_added": "13333502149240804",
+                     "date_last_used": "13362761615174734",
+                     "guid": "018d53f8-12fb-48f1-93ea-1abab84e5516",
+                     "id": "60",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Tiny Guide to x86 Assembly",
+                     "type": "url",
+                     "url": "https://www.cs.dartmouth.edu/~sergey/cs258/tiny-guide-to-x86-assembly.pdf"
+                  }, {
+                     "date_added": "13333502258525415",
+                     "date_last_used": "13363125957830106",
+                     "guid": "e8f79f6f-bfbb-4559-af23-41875f0760da",
+                     "id": "61",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Registers in x86",
+                     "type": "url",
+                     "url": "https://www.cs.uaf.edu/2017/fall/cs301/lecture/09_11_registers.html"
+                  }, {
+                     "date_added": "13362771643307349",
+                     "date_last_used": "13363125028438460",
+                     "guid": "0d06de55-4f75-42d4-9623-6cf0b3a73623",
+                     "id": "121",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "coder32 edition | X86 Opcode and Instruction Reference 1.12",
+                     "type": "url",
+                     "url": "http://ref.x86asm.net/coder32.html"
+                  } ],
+                  "date_added": "13333498948776245",
+                  "date_last_used": "0",
+                  "date_modified": "13366913420928344",
+                  "guid": "7e5828db-b2d8-4b01-ad5e-abd538cac6c7",
+                  "id": "56",
+                  "name": "Assembly",
+                  "type": "folder"
+               } ],
+               "date_added": "13333474536039956",
+               "date_last_used": "0",
+               "date_modified": "13370652262871916",
+               "guid": "f307dabd-eafc-40d9-8c42-75b66fa7d47a",
+               "id": "14",
+               "name": "Code",
+               "type": "folder"
+            }, {
+               "children": [ {
+                  "date_added": "13335556924826815",
+                  "date_last_used": "13363552646109740",
+                  "guid": "80dbc1ea-640b-4f54-b1af-60696cfd3b5e",
+                  "id": "75",
+                  "meta_info": {
+                     "power_bookmark_meta": ""
+                  },
+                  "name": "Portfolio Site",
+                  "type": "url",
+                  "url": "https://wtraceyv.github.io/"
+               }, {
+                  "date_added": "13344460889298490",
+                  "date_last_used": "13360254416833884",
+                  "guid": "4035b396-fcff-4260-aa00-4a1ab61d57b5",
+                  "id": "104",
+                  "meta_info": {
+                     "power_bookmark_meta": ""
+                  },
+                  "name": "Job Tracking",
+                  "type": "url",
+                  "url": "https://docs.google.com/spreadsheets/d/1gPcm9sobPeErZRjp4AxC36Kz-iHeltSsBWADpBs4P8s/edit#gid=0"
+               }, {
+                  "date_added": "13330301284000000",
+                  "date_last_used": "13371139552471938",
+                  "guid": "56308897-0324-4fa6-b698-f1f8a36d9d8a",
+                  "id": "38",
+                  "name": "LinkedIn",
+                  "type": "url",
+                  "url": "https://www.linkedin.com/in/walter-tracey-01b14419b/"
+               }, {
+                  "date_added": "13330301346000000",
+                  "date_last_used": "13369440341528137",
+                  "guid": "a80f3842-c9e4-4337-a4e5-1f6837c5d347",
+                  "id": "39",
+                  "name": "Indeed",
+                  "type": "url",
+                  "url": "https://www.indeed.com/?from=gnav-messaging--messaging-webapp"
+               }, {
+                  "date_added": "13360707839392951",
+                  "date_last_used": "0",
+                  "guid": "02f6c3aa-6f61-4117-adc2-2dabdd36c534",
+                  "id": "116",
+                  "meta_info": {
+                     "power_bookmark_meta": ""
+                  },
+                  "name": "Suggested Jobs | ZipRecruiter",
+                  "type": "url",
+                  "url": "https://www.ziprecruiter.com/jobseeker/home"
+               }, {
+                  "date_added": "13330301363000000",
+                  "date_last_used": "13355607671905177",
+                  "guid": "0325c5a1-feee-404a-bf4d-d9d2ad21c715",
+                  "id": "40",
+                  "name": "Glassdoor",
+                  "type": "url",
+                  "url": "https://www.glassdoor.com/member/home/index.htm"
+               }, {
+                  "children": [ {
+                     "date_added": "13327860840000000",
+                     "date_last_used": "0",
+                     "guid": "1fe5a128-38f2-407d-836c-210fdb1a8951",
+                     "id": "42",
+                     "name": "50 Most Common Interview Questions | Glassdoor Blog",
+                     "type": "url",
+                     "url": "https://www.glassdoor.com/blog/common-interview-questions/?utm_messageId=4f0050e075d840acbf8e1ae9ddfd3080"
+                  }, {
+                     "date_added": "13327860854000000",
+                     "date_last_used": "13360255959492674",
+                     "guid": "d1bec959-9267-489e-b7a3-d0ed5b0c6e0a",
+                     "id": "43",
+                     "name": "Top Companies 2023: The 50 best workplaces to grow your career in the U.S. | LinkedIn",
+                     "type": "url",
+                     "url": "https://www.linkedin.com/pulse/top-companies-2023-50-best-workplaces-grow-your-career-us/?trackingId=1%2BIdeG0QSYe180vGD3WT2g%3D%3D"
+                  }, {
+                     "date_added": "13357752894269945",
+                     "date_last_used": "0",
+                     "guid": "fdf0cef3-a039-4322-8b09-733ea6e1e261",
+                     "id": "114",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "LinkedIn Top Companies 2024: The 50 best large workplaces to grow your career in the U.S. | LinkedIn",
+                     "type": "url",
+                     "url": "https://www.linkedin.com/pulse/linkedin-top-companies-2024-50-best-large-workplaces-grow-hmgye/?trackingId=EWUnjJnbT1iKKkoYES2H4g%3D%3D"
+                  }, {
+                     "children": [ {
+                        "date_added": "13327908809000000",
+                        "date_last_used": "0",
+                        "guid": "c1a87d01-3492-4b73-b383-5462653e7566",
+                        "id": "45",
+                        "name": "Chris Sanden and Ales Plsek \"Embracing Change: Infrastructure Experiment...\" - Spinnaker Summit 2019 - YouTube",
+                        "type": "url",
+                        "url": "https://www.youtube.com/watch?v=IjTTs1sxlXs"
+                     }, {
+                        "date_added": "13327908831000000",
+                        "date_last_used": "0",
+                        "guid": "b9270b04-1dd8-45a0-954f-7ec2447358d7",
+                        "id": "46",
+                        "name": "A Sticky Situation: How Netflix Gains Confidence in Changes",
+                        "type": "url",
+                        "url": "https://www.infoq.com/presentations/sticky-canaries/"
+                     }, {
+                        "date_added": "13327908802000000",
+                        "date_last_used": "0",
+                        "guid": "82b72b0e-9689-40c2-afa7-f5782a377259",
+                        "id": "47",
+                        "name": "AWS re:Invent 2022 - The evolution of chaos engineering at Netflix (NFX303) - YouTube",
+                        "type": "url",
+                        "url": "https://www.youtube.com/watch?v=Xbn65E-BQhA"
+                     } ],
+                     "date_added": "13333474536040447",
+                     "date_last_used": "0",
+                     "date_modified": "0",
+                     "guid": "872638a6-586d-4c3d-b15a-14ed91dd5b99",
+                     "id": "44",
+                     "name": "Netflix Recommended",
+                     "type": "folder"
+                  } ],
+                  "date_added": "13333474536040376",
+                  "date_last_used": "0",
+                  "date_modified": "13360707839392951",
+                  "guid": "fd9e8dbc-f765-4ae2-9448-6a14ee010e74",
+                  "id": "41",
+                  "name": "Resources",
+                  "type": "folder"
+               } ],
+               "date_added": "13333474536040322",
+               "date_last_used": "0",
+               "date_modified": "13362521495561405",
+               "guid": "c621f22a-9448-4352-8b72-9bdc56b7b1e8",
+               "id": "37",
+               "name": "Jobs",
+               "type": "folder"
+            } ],
+            "date_added": "13333474536039836",
+            "date_last_used": "0",
+            "date_modified": "13344050753735352",
+            "guid": "38da1cf5-cc8c-4ee0-bff2-8e849509c47e",
+            "id": "13",
+            "name": "Professional",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "children": [ {
+                  "children": [ {
+                     "date_added": "13326853017000000",
+                     "date_last_used": "13334344160413518",
+                     "guid": "42bd8422-13d5-48b8-89de-3dc4807738a2",
+                     "id": "50",
+                     "name": "Film Scanning",
+                     "type": "url",
+                     "url": "https://www.negativelabpro.com/guide/scanning/"
+                  }, {
+                     "date_added": "13334344167073650",
+                     "date_last_used": "0",
+                     "guid": "04f604a9-fa7a-4ebf-824b-2a2679c463de",
+                     "id": "70",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Film Scanning Workflow Tips | B&H",
+                     "type": "url",
+                     "url": "https://www.bhphotovideo.com/explora/photography/tips-and-solutions/film-scanning-workflow-tips"
+                  }, {
+                     "date_added": "13334344178722293",
+                     "date_last_used": "0",
+                     "guid": "2c922b43-2546-4729-876a-cdfd11356df8",
+                     "id": "71",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Scanning without a Scanner | B&H",
+                     "type": "url",
+                     "url": "https://www.bhphotovideo.com/explora/photography/tips-and-solutions/scanning-without-a-scanner-digitizing-your-film-with-a-dslr"
+                  } ],
+                  "date_added": "13333474536040667",
+                  "date_last_used": "0",
+                  "date_modified": "13334344213022802",
+                  "guid": "054e483f-0a8e-4f56-b7e1-1542f93ac41d",
+                  "id": "51",
+                  "name": "Scan",
+                  "type": "folder"
+               }, {
+                  "children": [ {
+                     "date_added": "13334344213022802",
+                     "date_last_used": "0",
+                     "guid": "e96af6d3-63ec-45b6-9686-7e255c7b8cb4",
+                     "id": "72",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "CineStill Film DF96 Monobath",
+                     "type": "url",
+                     "url": "https://www.bhphotovideo.com/c/product/1419165-REG/cinestill_800342_df96_b_w_developer_fix.html/?ap=y&ap=y&smpm=ba_f2_lar&smp=y&lsft=BI%3A514&gclid=CjwKCAjwtuOlBhBREiwA7agf1kRig5ptdvrTA4XrDUU-68mvTByHFPqoTeQke7yqCik_dpV2FWfiERoCyOwQAvD_BwE"
+                  } ],
+                  "date_added": "13334344231337136",
+                  "date_last_used": "0",
+                  "date_modified": "13335556924826815",
+                  "guid": "bafefdd1-1eca-4f7e-a6fb-cc63ce392288",
+                  "id": "73",
+                  "name": "Develop",
+                  "type": "folder"
+               } ],
+               "date_added": "13333474536040636",
+               "date_last_used": "0",
+               "date_modified": "13334344231337205",
+               "guid": "6f1d48b1-448a-435f-bf10-1f8447f262bd",
+               "id": "49",
+               "name": "Film",
+               "type": "folder"
+            }, {
+               "children": [ {
+                  "date_added": "13336684950440139",
+                  "date_last_used": "13345088808652619",
+                  "guid": "969cfc98-d4b3-4f4b-94a5-d4e3d3e10156",
+                  "id": "77",
+                  "meta_info": {
+                     "power_bookmark_meta": ""
+                  },
+                  "name": "Tone Gen",
+                  "type": "url",
+                  "url": "https://www.szynalski.com/tone-generator/"
+               }, {
+                  "date_added": "13337027525616256",
+                  "date_last_used": "13337106823923557",
+                  "guid": "c70c4c5d-6234-409c-944f-0ffcea44a3a3",
+                  "id": "80",
+                  "meta_info": {
+                     "power_bookmark_meta": ""
+                  },
+                  "name": "Old HarmonyV",
+                  "type": "url",
+                  "url": "https://github.com/wtraceyv/HarmonyV_old/tree/main/Source"
+               } ],
+               "date_added": "13336684969906833",
+               "date_last_used": "0",
+               "date_modified": "13337191027876635",
+               "guid": "f11f6ee0-8933-46e5-8d37-83be77eab8c5",
+               "id": "78",
+               "name": "Music",
+               "type": "folder"
+            }, {
+               "children": [ {
+                  "children": [ {
+                     "date_added": "13340417536613914",
+                     "date_last_used": "13355880513632593",
+                     "guid": "4ce4ba88-a64d-42f6-b7b6-1ab3e956534c",
+                     "id": "93",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Dutch to English",
+                     "type": "url",
+                     "url": "https://www.google.com/search?q=dutch+to+english&oq=dutc&gs_lcrp=EgZjaHJvbWUqCwgAEEUYJxg7GIoFMgsIABBFGCcYOxiKBTILCAEQRRgnGDsYigUyEggCEAAYFBiDARiHAhixAxiABDIGCAMQRRhAMgYIBBBFGDkyBggFEEUYQTIGCAYQRRg8MgYIBxBFGDzSAQgyNDg4ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8&bshm=rime/1"
+                  }, {
+                     "date_added": "13340417416110169",
+                     "date_last_used": "13355879120201832",
+                     "guid": "c7f131a4-ffe6-4c6f-9b9a-6bf9271e4ce3",
+                     "id": "92",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Dutch Vocab",
+                     "type": "url",
+                     "url": "https://www.learndutch.org/online-dutch-course/"
+                  }, {
+                     "date_added": "13340423992515422",
+                     "date_last_used": "13353914460291847",
+                     "guid": "797a131b-cc57-4c80-a998-95de53c6d6dd",
+                     "id": "94",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Dutch Grammar",
+                     "type": "url",
+                     "url": "https://www.dutchgrammar.com/en/?n=Grammar.DutchGrammar"
+                  }, {
+                     "date_added": "13356208969089415",
+                     "date_last_used": "0",
+                     "guid": "be9598ac-007a-4b41-9da9-b1ea290f7a67",
+                     "id": "112",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Most Frequent Verbs",
+                     "type": "url",
+                     "url": "https://learning-dutch.com/most-frequent-dutch-verbs.pdf"
+                  }, {
+                     "date_added": "13362521495561405",
+                     "date_last_used": "0",
+                     "guid": "9d0d361f-606f-4c37-aa1f-4fb4f734b912",
+                     "id": "118",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Main Units | Mango Languages",
+                     "type": "url",
+                     "url": "https://learn.mangolanguages.com/pathway/from/en-US/to/nl/727/1/1"
+                  } ],
+                  "date_added": "13340416884059510",
+                  "date_last_used": "0",
+                  "date_modified": "13362521558537176",
+                  "guid": "b03bcb35-ca1f-4a1d-91cd-7588de16212c",
+                  "id": "91",
+                  "name": "Dutch",
+                  "type": "folder"
+               }, {
+                  "children": [ {
+                     "date_added": "13347947527933875",
+                     "date_last_used": "13349736431696241",
+                     "guid": "18fc83f2-6d0d-48fa-885e-95bec2e1412f",
+                     "id": "109",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "About – Learn Japanese",
+                     "type": "url",
+                     "url": "https://guidetojapanese.org/learn/complete/"
+                  }, {
+                     "date_added": "13362521558537176",
+                     "date_last_used": "0",
+                     "guid": "aafefcd3-7823-4e42-be11-70009ebfa103",
+                     "id": "119",
+                     "meta_info": {
+                        "power_bookmark_meta": ""
+                     },
+                     "name": "Main Units | Mango Languages",
+                     "type": "url",
+                     "url": "https://learn.mangolanguages.com/pathway/from/en-US/to/ja/797/1/1"
+                  } ],
+                  "date_added": "13347947552216770",
+                  "date_last_used": "0",
+                  "date_modified": "13362771643307349",
+                  "guid": "ae8fd342-428d-47f9-bccc-a978e851a787",
+                  "id": "110",
+                  "name": "Japanese",
+                  "type": "folder"
+               } ],
+               "date_added": "13340416876738651",
+               "date_last_used": "0",
+               "date_modified": "13340417416110169",
+               "guid": "643cd1e2-c3b2-43ad-aaf0-c3a318b25155",
+               "id": "90",
+               "name": "Language",
+               "type": "folder"
+            } ],
+            "date_added": "13333474536040529",
+            "date_last_used": "0",
+            "date_modified": "13340416876738729",
+            "guid": "9c9c8174-2c30-4c8d-8537-6f55170d749a",
+            "id": "48",
+            "name": "Hobby",
+            "type": "folder"
+         } ],
+         "date_added": "13333474501123283",
+         "date_last_used": "0",
+         "date_modified": "13340131355236920",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13333474501123312",
+         "date_last_used": "0",
+         "date_modified": "13343769006709343",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13333474501123313",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
