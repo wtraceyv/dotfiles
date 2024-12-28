@@ -19,7 +19,8 @@ ZSH_TMUX_AUTOSTART=true
 source $ZSH/oh-my-zsh.sh
 
 # default browser?
-BROWSER=chromium
+# BROWSER=chromium
+BROWSER=firefox
 
 # able color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -58,7 +59,7 @@ alias smooth='nvidia-force-comp-pipeline'
 alias matrix='cmatrix -sa -u 10 -C cyan'
 alias red="redshift -O 4000K -b .8:.8 -v"
 alias nored="redshift -x -v"
-alias wp="feh -g 640x480 -d -S filename ~/.wallpapers -A 'feh --bg-scale ~/.wallpapers/%n'"
+alias wp="feh -g 640x480 -d -S filename ~/.wallpapers -A 'feh --bg-fill ~/.wallpapers/%n'"
 
 # can't include gcc/c std functions with this
 function gnasm {

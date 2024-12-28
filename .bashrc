@@ -106,6 +106,8 @@ alias bashrc="vim ~/.bashrc"
 alias firefox="/usr/bin/firefox-developer-edition"
 alias picomawesome="picom --experimental-backends &"
 
+export PS1='\[\e[0;31m\]wa11-e\[\e[0m\]:\w\[\e[0;32m\] λ\[\e[0m\] '
+
 # to output a file with syntax highlight AND line numbers:
 printCodeWithHighlight() {
     pygmentize -g $1 | perl -e 'print ++$i." $_" for <>'
