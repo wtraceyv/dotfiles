@@ -5,7 +5,6 @@ local beautiful = require("beautiful")
 local helpers = require("helpers")
 
 local taglist = require("themes.zen.taglist")
-local tasklist = require("themes.zen.tasklist")
 
 awful.screen.connect_for_each_screen(function(s)
 
@@ -31,9 +30,13 @@ awful.screen.connect_for_each_screen(function(s)
 		bg = "#00000000",
 		margins = dpi(10),
 	}
+
+	-- top or bottom..
 	awful.placement.top(temp_wibox, { margins = dpi(6) })
+
+	-- awful.placement.bottom(temp_wibox, { margins = dpi(6) })
 	-- temp_wibox:struts {
-	-- 	top = dpi(40)
+	-- 	bottom = dpi(28)
 	-- }
 
 	s.mywibox = temp_wibox
@@ -41,8 +44,6 @@ awful.screen.connect_for_each_screen(function(s)
 	s.mywibox:setup {
 		{
 			widget = wibox.container.background,
-			-- TODO: use theme
-			-- bg = "#00000033",
 			bg = beautiful.bg_normal,
 			{
 				layout = wibox.layout.align.horizontal,
@@ -53,8 +54,6 @@ awful.screen.connect_for_each_screen(function(s)
 					taglist.gen_widget(s),
 					mytextclock,
 				},
-				-- Middle widget (open apps)
-				-- tasklist.gen_tasklist(s),
 				-- {
 				-- 	-- Right widgets
 				-- 	layout = wibox.layout.fixed.horizontal,

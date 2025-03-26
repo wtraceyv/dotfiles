@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Obsidian
-Exec=/home/walter/non-pac/imgapp/Obsidian-1.4.13.AppImage %U
+Exec=/home/walter/non-pac/imgapp/Obsidian-1.8.4.AppImage %U
 Terminal=false
 Type=Application
 Icon=obsidian.png

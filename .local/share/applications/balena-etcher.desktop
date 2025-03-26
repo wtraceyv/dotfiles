@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/walter/.local/bin/imageapps/krita-5.0.2-x86_64.appimage
+Name=Krita
+Hidden=true
+

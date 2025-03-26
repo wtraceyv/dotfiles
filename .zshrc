@@ -56,7 +56,7 @@ alias mst="TZ='America/Denver' date"
 alias pic='killall picom && (picom --daemon >/dev/null &) && echo success || (picom --daemon >/dev/null &)'
 alias temps="watch sensors"
 alias smooth='nvidia-force-comp-pipeline'
-alias matrix='cmatrix -sa -u 10 -C cyan'
+alias matrix='cmatrix -sa -u 10 -b -M "you silly billy"'
 alias red="redshift -O 4000K -b .8:.8 -v"
 alias nored="redshift -x -v"
 alias wp="feh -g 640x480 -d -S filename ~/.wallpapers -A 'feh --bg-fill ~/.wallpapers/%n'"
