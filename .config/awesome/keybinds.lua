@@ -139,7 +139,11 @@ globalkeys = gears.table.join(
     -- https://www.reddit.com/r/awesomewm/comments/oyspco/rofi_with_awesome/
     awful.key({ modkey }, "p", function()
         awful.spawn.with_shell("rofi -show drun &>> /tmp/rofi.log")
-    end, { ... })
+    end, { ... }),
+
+		awful.key({ modkey }, "b", function()
+			awful.spawn("firefox")
+		end, { ... })
 
 )
 

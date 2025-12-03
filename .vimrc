@@ -3,6 +3,9 @@
 " colorscheme available on github, place in ~/.vim/colors/
 " otherwise set your own or get rid of :colorscheme 
 
+" Remap kj in insert mode to esc because it easy and fun
+inoremap kj <Esc>
+
 ":colorscheme monokai-bold
 :set number
 ":set relativenumber

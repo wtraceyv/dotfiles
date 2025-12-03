@@ -38,6 +38,7 @@ alias c='clear'
 alias e='exit'
 alias l='ls -lah'
 alias li='ls -lh'
+alias k="minikube kubectl --"
 alias ff='fastfetch'
 alias neoa='neofetch --ascii_distro arch'
 alias neog='neofetch --ascii_distro gentoo'

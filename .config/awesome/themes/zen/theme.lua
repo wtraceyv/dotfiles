@@ -9,12 +9,12 @@ local color_theme = "tokyonightstorm"
 local colors = require('themes.colors.' .. color_theme)
 
 -- small tweak to make client shape theme-bound
--- client.connect_signal("manage", function (c)
+client.connect_signal("manage", function (c)
 -- 	-- all clients rounded corners
--- 	c.shape = function(cr, w, h)
--- 		gears.shape.rounded_rect(cr, w, h, 10)
--- 	end
--- end)
+	c.shape = function(cr, w, h)
+		gears.shape.rounded_rect(cr, w, h, 10)
+	end
+end)
 
 theme.tagnames = {"一", "二", "三", "四", "五", "六", "七", "八", "九"}
 theme.useless_gap = dpi(8)
