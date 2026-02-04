@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+
+
 [[ $- != *i* ]] && return
 
 colors() {
@@ -106,6 +108,7 @@ alias bashrc="vim ~/.bashrc"
 alias firefox="/usr/bin/firefox-developer-edition"
 alias picomawesome="picom --experimental-backends &"
 
+# my easy unspecial bash prompt
 export PS1='\[\e[0;31m\]wa11-e\[\e[0m\]:\w\[\e[0;32m\] λ\[\e[0m\] '
 
 # to output a file with syntax highlight AND line numbers:

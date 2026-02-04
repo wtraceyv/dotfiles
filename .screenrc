@@ -1,0 +1,15 @@
+hardstatus alwayslastline
+hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW}|%{KY}%101`%{KW}|%D %M %d %Y%{= Kc} %C%A%{-}'
+
+bindkey "^[s" eval "split" "focus" "screen"
+bindkey "^[v" eval "split -v" "focus" "screen"
+bindkey "^[x" eval "kill" "remove"
+
+bindkey "^[n" screen
+bindkey "^[." next
+bindkey "^[," prev
+
+bindkey "^[h" focus left
+bindkey "^[j" focus down
+bindkey "^[k" focus up
+bindkey "^[l" focus right

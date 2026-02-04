@@ -1,0 +1,9 @@
+[user]
+	email = wtraceyv@gmail.com
+	name = walter
+[init]
+	defaultBranch = main
+[credential]
+	helper = cache
+[core]
+	editor = vim
