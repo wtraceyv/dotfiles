@@ -14,6 +14,9 @@ import (
 	"github.com/google/go-github/v75/github"
 )
 
+// TODO: add some logging so I know how it going
+// TODO: go get github.com/briandowns/spinner ?
+
 func main() {
 	user := flag.String("u", "wtraceyv", "User whose repo we pull the image from.")
 	repo := flag.String("r", "dotfiles", "Repo to pull image from.")
