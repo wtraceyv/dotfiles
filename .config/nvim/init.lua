@@ -273,9 +273,9 @@ require('lazy').setup({
       require('nvim-tree').setup {}
       -- set keymap to toggle the tree
       vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<CR>', { silent = true })
-      -- vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true })
     end,
   },
+  {'akinsho/toggleterm.nvim', version = "*", config = true},
 
   -- Alternatively, use `config = function() ... end` for full control over the configuration.
   -- If you prefer to call `setup` explicitly, use:

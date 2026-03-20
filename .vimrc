@@ -2,6 +2,7 @@
 :syntax on
 " colorscheme available on github, place in ~/.vim/colors/
 " otherwise set your own or get rid of :colorscheme 
+:colorscheme minimalist
 
 " Remap kj in insert mode to esc because it easy and fun
 inoremap kj <Esc>

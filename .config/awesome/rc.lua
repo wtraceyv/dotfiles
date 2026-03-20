@@ -18,7 +18,7 @@ require("keybinds")
 require("signals")
 require("themes." .. theme.. ".wibar")
 require("themes." .. theme .. ".sidedash")
--- require("sub-components.notes_container")
+require("sub-components.notes_container")
 
 
 -- ================= wallpaper ======================

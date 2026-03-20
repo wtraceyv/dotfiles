@@ -10,20 +10,23 @@ local notes_block = require("sub-components.notes_block")
 ]]--
 
 local todo_text = [[
-Isaac songs!
-------------
-There is a Time
-Change the Weather (Isaac send)
-Where The Angels Fly (?)
-Revelator (supp. harm maybe)
-Call on Coyote
+1. Could you run?
+2. Could you write?
+3. Could you record?
+4. Could you sit?
 ]]
+
+-- local todo_markup = [[
+-- <span color="]] .. beautiful.colors[9] .. [[" size="xx-large">
+-- <span size="xx-large">
+-- todo
+-- </span>
+-- ]] .. todo_text .. [[
+-- </span>
+-- ]]
 
 local todo_markup = [[
 <span color="]] .. beautiful.colors[9] .. [[" size="xx-large">
-<span size="xx-large">
-todo
-</span>
 ]] .. todo_text .. [[
 </span>
 ]]

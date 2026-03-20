@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/walter/.oh-my-zsh'
+let g:netrw_dirhist_1='/home/walter/Desktop/reorg'
+let g:netrw_dirhist_0='/home/walter/Desktop/flash-cardc'
+let g:netrw_dirhist_9='/home/walter/Desktop/flash-cardc/src'
+let g:netrw_dirhist_8='/home/walter/Desktop/flash-cardc'
+let g:netrw_dirhist_7='/home/walter/.tmux'
+let g:netrw_dirhist_6='/home/walter/git/HarmonyV/HarmonyV/Source/gui'
+let g:netrw_dirhist_5='/home/walter/git/HarmonyV/HarmonyV/Source'
+let g:netrw_dirhist_4='/home/walter/git/HarmonyV/HarmonyV'
+let g:netrw_dirhist_3='/home/walter/git/HarmonyV/HarmonyV/Source/gui'
