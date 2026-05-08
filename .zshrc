@@ -22,7 +22,7 @@ source $ZSH/oh-my-zsh.sh
 # BROWSER=chromium
 BROWSER=firefox
 
-export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$(go env GOPATH)/bin"
 
 # able color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -103,7 +103,6 @@ function three {
 function three-basic {
 	source ~/.bin/screenlayout/home.sh && red
 }
-
 
 # activate syntax highlight (two places it could be that I've seen)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -12,7 +12,6 @@
     "editor.insertSpaces": false,
     "glassit-linux.opacity": 90,
     "glassit.alpha": 230,
-    "editor.minimap.enabled": false,
     "C_Cpp.intelliSenseEngine": "enabled",
     "[cpp]": {
     
@@ -44,5 +43,10 @@
                 "<Esc>"
             ]
         }
-    ]
+    ],
+    "workbench.sideBar.location": "right",
+    "editor.minimap.enabled": false,
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    }
 }
